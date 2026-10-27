@@ -134,7 +134,7 @@ html.js h1.title .hl{background-size:0% 3px;animation:uline .8s cubic-bezier(.3,
 .citebox pre{margin:0;padding:22px;font-family:var(--mono);font-size:13px;line-height:1.7;white-space:pre-wrap;overflow-x:auto}
 
 /* ---- footer ------------------------------------------------------------ */
-footer{border-top:2px solid var(--rule);padding:30px 0 56px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:13px}
+footer{border-top:2px solid var(--rule);padding:30px 0 88px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:13px}
 footer .fb{display:flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;font-size:16px}
 footer .fb img,footer .fb svg{width:21px;height:21px;display:block}
 footer .fl{color:var(--muted)}
@@ -142,7 +142,7 @@ footer .fl span{display:inline-block;margin-right:14px}
 footer .fr{display:flex;gap:18px}
 footer .fr a{color:var(--muted);text-decoration:none}
 footer .fr a:hover{color:var(--ink)}
-.credit{width:100%;max-width:78ch;font-size:12px;line-height:1.6;color:var(--muted);margin:0}
+.credit{width:100%;font-size:12px;line-height:1.6;color:var(--muted);margin:0}
 .credit a{text-underline-offset:3px;text-decoration-thickness:1px}
 .credit a:hover{color:var(--ink)}
 
