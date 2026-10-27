@@ -83,6 +83,7 @@ html.js h1.title .hl{background-size:0% 3px;animation:uline .8s cubic-bezier(.3,
 
 /* ---- sections ---------------------------------------------------------- */
 .sec{border-top:1px solid var(--rule);padding:clamp(40px,5vw,64px) 0;scroll-margin-top:70px}
+.sec [id]{scroll-margin-top:80px} /* in-section anchors, e.g. #video */
 .sec>h2{font-size:clamp(27px,3.4vw,42px);line-height:1.06;letter-spacing:-0.025em;margin:0 0 22px;text-wrap:balance}
 .sec>h2 .sn{font-family:var(--mono);font-size:0.42em;font-weight:400;color:var(--muted);vertical-align:0.55em;margin-right:0.85em;letter-spacing:0}
 .subh{font-family:var(--display);font-weight:500;font-size:21px;letter-spacing:-0.015em;margin:42px 0 8px}
@@ -310,7 +311,7 @@ html.js .keys>div.rv:nth-child(3){transition-delay:.2s}
   .nav{flex:1;min-width:0;flex-wrap:nowrap;overflow-x:auto;gap:0 18px;padding-right:28px;scrollbar-width:none;-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent)}
   .nav::-webkit-scrollbar{display:none}
   .nav a{flex:none;white-space:nowrap}
-  .sec{scroll-margin-top:100px}
+  .sec,.sec [id]{scroll-margin-top:100px}
   /* phones: resource links show at once instead of waiting on the scroll reveal */
   html.js .reslist .btn.rv{opacity:1;transform:none;transition:background .18s ease,color .18s ease}
 }
