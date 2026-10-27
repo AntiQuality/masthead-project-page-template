@@ -1,18 +1,70 @@
 # Masthead
 
-An editorial project page template for research papers. Plain HTML, CSS and JS: no build step, works on GitHub Pages as is.
+**An editorial project page template for research papers.** Plain HTML, CSS and JavaScript. No build step, no dependencies, and it runs on GitHub Pages as is.
 
-> Work in progress. Full docs, screenshots and the live demo are coming.
+[Live demo](https://antiquality.github.io/masthead-project-page-template/) &nbsp;&nbsp; [Use this template](https://github.com/AntiQuality/masthead-project-page-template/generate) &nbsp;&nbsp; [Real example: AgentAbstain](https://agentabstain.github.io)
+
+![Masthead in light and dark mode](.github/screenshots/hero.png)
+
+## Why Masthead
+
+- **Looks like a front page, not a slide.** Big editorial type, hairline rules and a paper-and-ink palette that puts your title first.
+- **Light and dark mode built in.** It follows the reader's system setting, and a toggle in the top bar remembers their choice.
+- **Results that read like results.** A sortable table, a bar chart drawn in plain HTML and CSS, three key numbers and a case study layout that compares methods step by step.
+- **Fast and accessible.** Lighthouse scores 100 for performance, accessibility, best practices and SEO, on mobile and desktop. The whole page is about 17 KB gzipped before fonts and figures.
+- **Ready for search and sharing.** Google Scholar `citation_*` tags, Open Graph and Twitter cards with a 1200 by 630 preview image, and schema.org structured data.
+- **Easy to edit, by hand or with an AI agent.** Every block in `index.html` is a marked module you can copy or delete, and [`AGENTS.md`](AGENTS.md) tells coding agents how to fill the page in.
+
+## How it compares
+
+| | Masthead | Nerfies-style templates |
+|---|---|---|
+| Dependencies | None (Google Fonts only) | Bulma, jQuery, Font Awesome, carousel plugins |
+| Dark mode | Yes, with a toggle | No |
+| Sortable results table | Yes | No |
+| Charts | Built in, HTML and CSS | Images only |
+| Case study and comparison layouts | Yes | No |
+| Theme presets | 4 | No |
+| License | MIT | CC BY-SA 4.0 |
+
+Nerfies and its descendants are great templates and inspired a whole generation of project pages. Masthead takes a different look and leans on modern CSS instead of libraries.
 
 ## Quick start
 
-1. Click **Use this template** (or fork / download this repo).
-2. Edit `index.html`: every block is marked with a `MODULE` comment, so delete what you don't need.
+1. Click **Use this template** (or fork or download this repo).
+2. Edit `index.html`. Every block is marked with a `MODULE` comment, so delete what you don't need.
 3. Change colors and fonts in `assets/css/tokens.css`. Light and dark mode are both defined there.
-4. Replace the placeholder figures and video in `assets/media/`.
+4. Replace the placeholder figures, video and `social-preview.png` in `assets/media/`.
 5. Turn on GitHub Pages for the repo: in Settings, open Pages and deploy from `main`.
 
-Want to see a finished page first? Masthead is adapted from the [AgentAbstain](https://agentabstain.github.io) project page, listed under Showcase below.
+To preview locally, run `python3 -m http.server` in the repo folder and open `http://localhost:8000`.
+
+## Modules
+
+| Module | What it shows | Main class |
+|---|---|---|
+| Top bar | Project name, section links that follow the scroll, dark mode toggle | `.top` |
+| Hero | Venue badge, title with an accent word, pitch, resource buttons, authors | `.hero` |
+| Abstract | A one-line hook next to the abstract | `.abstract` |
+| Stats strip | Three to six headline numbers that count up on scroll | `.stats` |
+| Figure | Wide figure, video or YouTube embed, side-by-side panels | `.fig`, `.fig-row`, `.embed` |
+| Comparison cards | Two inputs and the one change between them | `.pair` |
+| Key results | Three big numbers with a line of context each | `.keys` |
+| Results table | Sortable columns, highlighted best row, citations under method names | `.tbl` |
+| Bar chart | Grouped bars, legend, hover to focus a series | `.chart` |
+| Case study | The input, why it is hard, one lane per method, an outcome bar | `.case` |
+| Callout | One takeaway sentence | `.callout` |
+| Cite | BibTeX with a copy button | `.citebox` |
+
+![Key results, sortable table and bar chart](.github/screenshots/results.png)
+
+![Case study with one lane per method](.github/screenshots/case-study.png)
+
+## Mobile
+
+The navigation turns into one swipeable row that follows the section in view, cards and lanes stack, and charts and tables fit or scroll on their own.
+
+![Masthead on phones in light and dark mode](.github/screenshots/mobile.png)
 
 ## Theme presets
 
@@ -31,6 +83,19 @@ Want to see a finished page first? Masthead is adapted from the [AgentAbstain](h
 
 Each preset loads its own fonts and defines both light and dark mode. Preview any of them on the demo page with `?theme=`, for example `index.html?theme=gazette`.
 
+![The four theme presets](.github/screenshots/themes.png)
+
+## Customizing
+
+- **Colors and fonts.** Everything lives in CSS variables in `assets/css/tokens.css`: paper and ink, the accent, the venue badge, status colors and four chart series colors.
+- **Width.** Change `--maxw` in `tokens.css`.
+- **Motion.** Scroll reveals, counting numbers and growing bars turn off for readers who prefer reduced motion. Add `?static` to the URL to see the page without them.
+- **No JavaScript.** Nothing is hidden without JS. Sorting, the theme toggle and animations simply do not run.
+
+## Using an AI coding agent
+
+Masthead is meant to be filled in by an agent as easily as by hand. Point your agent at [`AGENTS.md`](AGENTS.md) and give it your paper (PDF, abstract, BibTeX and figures). It explains which files to edit, how each module works and the text style to follow.
+
 ## Showcase
 
 Pages in the Masthead style:
@@ -47,4 +112,4 @@ Masthead grew out of the [AgentAbstain](https://agentabstain.github.io) project 
 
 ## License
 
-[MIT](LICENSE).
+[MIT](LICENSE). You are free to use Masthead for any project. A link back to this repo in your footer is appreciated.

@@ -70,7 +70,9 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- fonts load without blocking the first paint; change the family names here if you change fonts -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap"></noscript>
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/masthead.css">
 <!-- optional: ?theme=gazette, ?theme=lab or ?theme=mono previews a preset. Delete this block on your own page -->
@@ -134,11 +136,11 @@
           <svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M10 8.4v7.2l6-3.6z" fill="currentColor"/></svg>
           <span class="lbl">Video</span><span class="tag">2 min</span>
         </a>
-        <!-- not released yet? add class "soon" and drop the href -->
-        <a class="btn soon">
+        <!-- not released yet? use a <span class="btn soon"> instead of a link -->
+        <span class="btn soon" aria-disabled="true">
           <svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.7"/><path d="M4.5 5.5v13c0 1.5 3.4 2.7 7.5 2.7s7.5-1.2 7.5-2.7v-13M4.5 12c0 1.5 3.4 2.7 7.5 2.7s7.5-1.2 7.5-2.7"/></svg>
           <span class="lbl">Dataset</span><span class="tag">coming soon</span>
-        </a>
+        </span>
       </div>
     </div>
     <div class="byline">

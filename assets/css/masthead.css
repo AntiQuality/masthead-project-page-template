@@ -140,7 +140,7 @@ footer .fb img,footer .fb svg{width:21px;height:21px;display:block}
 footer .fl{color:var(--muted)}
 footer .fl span{display:inline-block;margin-right:14px}
 footer .fr{display:flex;gap:18px}
-footer .fr a{color:var(--muted);text-decoration:none}
+footer .fr a{color:var(--muted);text-decoration:none;padding:8px 0}
 footer .fr a:hover{color:var(--ink)}
 .credit{width:100%;font-size:12px;line-height:1.6;color:var(--muted);margin:0}
 .credit a{text-underline-offset:3px;text-decoration-thickness:1px}
@@ -317,7 +317,7 @@ html.js .keys>div.rv:nth-child(3){transition-delay:.2s}
   .top-r{width:100%;gap:14px}
   .nav{flex:1;min-width:0;flex-wrap:nowrap;overflow-x:auto;gap:0 18px;padding-right:28px;scrollbar-width:none;-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent)}
   .nav::-webkit-scrollbar{display:none}
-  .nav a{flex:none;white-space:nowrap}
+  .nav a{flex:none;white-space:nowrap;padding:6px 0}
   .sec,.sec [id]{scroll-margin-top:100px}
   /* phones: resource links show at once instead of waiting on the scroll reveal */
   html.js .reslist .btn.rv{opacity:1;transform:none;transition:background .18s ease,color .18s ease}
