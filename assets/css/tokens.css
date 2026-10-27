@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Masthead — design tokens
+   Change the look of the whole page here: colors, fonts, width.
+   Fonts are loaded in index.html <head>; swap that <link> if you change them.
+   ========================================================================== */
+
+:root{
+  color-scheme:light;
+
+  /* paper & ink */
+  --bg:#f3f2ec;            /* page background */
+  --paper:#fbfaf6;         /* raised surfaces (code, cards) */
+  --ink:#191712;           /* body text */
+  --muted:#5e5c53;         /* secondary text */
+  --rule:#191712;          /* strong rules and borders */
+  --hair:rgba(25,23,18,0.13); /* hairline dividers */
+
+  /* accent: links, highlights, key numbers */
+  --accent:oklch(0.46 0.16 256);
+  --accent-soft:oklch(0.46 0.16 256 / 0.08);
+  --on-accent:#ffffff;
+
+  /* venue badge in the eyebrow (e.g. "Oral", "Spotlight") */
+  --badge:#d4661a;
+  --on-badge:#ffffff;
+
+  /* type */
+  --display:'Space Grotesk',system-ui,sans-serif;
+  --text:'Hanken Grotesk',system-ui,sans-serif;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+
+  /* layout */
+  --maxw:1024px;
+}
+
+/* dark: follows the system unless the reader picked a theme with the toggle */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#15140f;
+    --paper:#1d1c17;
+    --ink:#ecebe3;
+    --muted:#a3a197;
+    --rule:#ecebe3;
+    --hair:rgba(236,235,227,0.14);
+    --accent:oklch(0.74 0.12 256);
+    --accent-soft:oklch(0.74 0.12 256 / 0.12);
+    --on-accent:#15140f;
+    --badge:#e07a33;
+    --on-badge:#15140f;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#15140f;
+  --paper:#1d1c17;
+  --ink:#ecebe3;
+  --muted:#a3a197;
+  --rule:#ecebe3;
+  --hair:rgba(236,235,227,0.14);
+  --accent:oklch(0.74 0.12 256);
+  --accent-soft:oklch(0.74 0.12 256 / 0.12);
+  --on-accent:#15140f;
+  --badge:#e07a33;
+  --on-badge:#15140f;
+}
