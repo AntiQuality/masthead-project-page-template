@@ -7,30 +7,31 @@
   Masthead — a project page template for research papers.
   Everything you need to edit is marked with MODULE comments below.
   Colors and fonts: assets/css/tokens.css. Delete any module you don't need.
+  A filled-in example lives in examples/rulebook.html.
 -->
 
-<!-- ===== META: title, search, social previews ===== -->
-<title>Rulebook: Learning the Rules of a World from a Handful of Frames</title>
-<meta name="description" content="Rulebook recovers the update rule of a cellular world from four snapshots, then rolls it out hundreds of steps with no further data.">
-<link rel="canonical" href="https://example.github.io/rulebook/">
+<!-- ===== META: title, search, social previews — replace every PAPER TITLE / URL ===== -->
+<title>Paper Title: A Short, Memorable Subtitle</title>
+<meta name="description" content="One or two sentences that summarize the paper. Search engines and link previews show this text.">
+<link rel="canonical" href="https://your-username.github.io/your-project/">
 <meta name="theme-color" content="#f3f2ec" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#15140f" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Rulebook">
-<meta property="og:title" content="Rulebook: Learning the Rules of a World from a Handful of Frames">
-<meta property="og:description" content="Four snapshots in, an exact update rule out, and rollouts that stay correct for hundreds of steps.">
-<meta property="og:url" content="https://example.github.io/rulebook/">
-<meta property="og:image" content="https://example.github.io/rulebook/assets/media/teaser.svg">
+<meta property="og:site_name" content="Project Name">
+<meta property="og:title" content="Paper Title: A Short, Memorable Subtitle">
+<meta property="og:description" content="One or two sentences that summarize the paper.">
+<meta property="og:url" content="https://your-username.github.io/your-project/">
+<meta property="og:image" content="https://your-username.github.io/your-project/assets/media/figure-wide.svg">
 <meta name="twitter:card" content="summary_large_image">
-<!-- Google Scholar reads these citation_* tags -->
-<meta name="citation_title" content="Rulebook: Learning the Rules of a World from a Handful of Frames">
-<meta name="citation_author" content="Example, Ada">
-<meta name="citation_author" content="Placeholder, Ben">
-<meta name="citation_author" content="Sample, Chiara">
-<meta name="citation_author" content="Demo, Dev">
+<!-- Google Scholar reads these citation_* tags: one citation_author per author, "Last, First" -->
+<meta name="citation_title" content="Paper Title: A Short, Memorable Subtitle">
+<meta name="citation_author" content="Author, First">
+<meta name="citation_author" content="Author, Second">
+<meta name="citation_author" content="Author, Third">
+<meta name="citation_author" content="Author, Last">
 <meta name="citation_publication_date" content="2026">
-<meta name="citation_conference_title" content="Conference on Example Learning">
-<meta name="citation_pdf_url" content="https://example.github.io/rulebook/paper.pdf">
+<meta name="citation_conference_title" content="Conference Name">
+<meta name="citation_pdf_url" content="https://your-username.github.io/your-project/paper.pdf">
 
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <!-- apply the reader's saved light/dark choice before first paint -->
@@ -51,7 +52,7 @@
   <!-- ===== MODULE: top bar — brand + section links (one link per section id) ===== -->
   <header class="top">
     <div class="top-in">
-      <a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="25" height="25">Rulebook</a>
+      <a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="25" height="25">Project Name</a>
       <div class="top-r">
         <nav class="nav" aria-label="Sections">
           <a href="#abstract">Abstract</a>
@@ -71,27 +72,27 @@
 
   <!-- ===== MODULE: hero — venue, title, one-paragraph pitch, resource links, authors ===== -->
   <section class="hero" id="top">
-    <p class="eyebrow"><span class="badge">Spotlight</span>Conference on Example Learning 2026</p>
+    <p class="eyebrow"><span class="badge">Oral</span>Conference Name 2026 &middot; Track</p>
     <div class="title-row">
       <!-- wrap one word in <span class="hl"> for the accent underline -->
-      <h1 class="title">Learning the rules from a <span class="hl">handful</span> of frames</h1>
+      <h1 class="title">Your paper title goes <span class="hl">here</span></h1>
       <!-- optional logo / crest; delete the <img> if you don't have one -->
-      <img class="hero-crest" src="assets/logo.svg" alt="Rulebook logo: a glider pattern" width="150" height="150">
+      <img class="hero-crest" src="assets/logo.svg" alt="Project logo" width="150" height="150">
     </div>
     <div class="hero-grid">
-      <p class="lead"><b>Rulebook</b> watches four snapshots of a cellular world and writes down the exact rule that produced them. The recovered rule rolls the world forward hundreds of steps without drifting, where neural simulators trained on a thousand times more data fall apart within twenty.</p>
+      <p class="lead"><b>Project Name</b> does one thing worth a sentence. Use this paragraph to pitch the paper in two or three lines: the problem, what you did, and the result a reader should remember. Want to see it filled in? Open the <a href="examples/rulebook.html">example page</a>.</p>
       <div class="reslist">
         <a class="btn" href="https://arxiv.org/abs/0000.00000" target="_blank" rel="noopener">
           <svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 2.8h8.2L19 7.6v13.6H6z"/><path d="M14 2.8v5h5M9 12h7M9 15.5h7M9 19h4"/></svg>
           <span class="lbl">Paper</span><span class="tag">arXiv</span>
         </a>
-        <a class="btn" href="https://github.com/example/rulebook" target="_blank" rel="noopener">
+        <a class="btn" href="https://github.com/your-username/your-project" target="_blank" rel="noopener">
           <svg class="bic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1.8a10.2 10.2 0 0 0-3.2 19.9c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .9-.3 2.8 1a9.6 9.6 0 0 1 5.1 0c1.9-1.3 2.8-1 2.8-1 .6 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10.2 10.2 0 0 0 12 1.8z"/></svg>
           <span class="lbl">Code</span><span class="tag">GitHub</span>
         </a>
         <a class="btn" href="#results">
           <svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M10 8.4v7.2l6-3.6z" fill="currentColor"/></svg>
-          <span class="lbl">Video</span><span class="tag">8 s</span>
+          <span class="lbl">Video</span><span class="tag">2 min</span>
         </a>
         <!-- not released yet? add class "soon" and drop the href -->
         <a class="btn soon">
@@ -102,96 +103,99 @@
     </div>
     <div class="byline">
       <p class="authors">
-        <span><a href="https://example.com/ada" target="_blank" rel="noopener">Ada Example</a><sup>1,&lowast;</sup></span>,
-        <span><a href="https://example.com/ben" target="_blank" rel="noopener">Ben Placeholder</a><sup>2,&lowast;</sup></span>,
-        <span><a href="https://example.com/chiara" target="_blank" rel="noopener">Chiara Sample</a><sup>1</sup></span>,
-        <span><a href="https://example.com/dev" target="_blank" rel="noopener">Dev Demo</a><sup>2,&dagger;</sup></span>
+        <span><a href="https://example.com" target="_blank" rel="noopener">First Author</a><sup>1,&lowast;</sup></span>,
+        <span><a href="https://example.com" target="_blank" rel="noopener">Second Author</a><sup>2,&lowast;</sup></span>,
+        <span><a href="https://example.com" target="_blank" rel="noopener">Third Author</a><sup>1</sup></span>,
+        <span><a href="https://example.com" target="_blank" rel="noopener">Last Author</a><sup>2,&dagger;</sup></span>
       </p>
-      <p class="affil"><span><sup>1</sup>Example University</span><span><sup>2</sup>Institute of Placeholder Studies</span></p>
-      <p class="note"><sup>&lowast;</sup> Equal contribution. <sup>&dagger;</sup> Corresponding author: <a href="mailto:dev@example.com">dev@example.com</a></p>
+      <p class="affil"><span><sup>1</sup>First Institution</span><span><sup>2</sup>Second Institution</span></p>
+      <p class="note"><sup>&lowast;</sup> Equal contribution. <sup>&dagger;</sup> Corresponding author: <a href="mailto:you@example.com">you@example.com</a></p>
     </div>
   </section>
 
   <!-- ===== MODULE: abstract — a one-line hook on the left, the abstract on the right ===== -->
   <section class="sec abstract" id="abstract">
     <div class="abs-grid">
-      <p class="lede">Most world models learn to <em>imitate</em> what happens next. Rulebook learns <span class="hl">why</span> it happens.</p>
+      <p class="lede">A one-line hook that frames the paper. Put the <em>usual</em> view first, then what <span class="hl">yours</span> changes.</p>
       <div class="prose">
-        <p>Learned simulators predict the next frame well, then drift: small errors compound until the rollout no longer resembles the world. We argue that for worlds governed by simple local rules, the right output is the rule itself.</p>
-        <p>Rulebook frames rule discovery as sparse search over neighborhood functions, scored by how exactly each candidate reproduces a handful of observed frames. On twelve cellular worlds it recovers the true rule from four snapshots in eleven of them, and its rollouts stay above 99% cell accuracy for 500 steps.</p>
+        <p>Paste your abstract here. The right column reads well at two or three short paragraphs; break a long abstract where the argument turns, usually between the problem and the method.</p>
+        <p>The second paragraph can carry the method and the headline result. Keep numbers in the stats strip below, so this text stays readable.</p>
       </div>
     </div>
   </section>
 
   <!-- ===== MODULE: stats strip — 3 to 6 headline numbers (data-n counts up on scroll) ===== -->
+  <!-- keep values short (12K, not 12000); add class "key" to the one in accent color -->
   <div class="stats">
-    <div class="stat"><div class="n" data-n="4">4</div><div class="l">Frames observed</div></div>
-    <div class="stat"><div class="n" data-n="262">262<small>K</small></div><div class="l">Rules searched</div></div>
-    <div class="stat"><div class="n" data-n="500">500</div><div class="l">Steps rolled out</div></div>
-    <div class="stat"><div class="n" data-n="12">12</div><div class="l">Benchmark worlds</div></div>
-    <div class="stat key"><div class="n" data-n="99.7" data-dec="1">99.7<small>%</small></div><div class="l">Cell accuracy at t = 500</div></div>
+    <div class="stat"><div class="n" data-n="12">12</div><div class="l">Datasets</div></div>
+    <div class="stat"><div class="n" data-n="3.4" data-dec="1">3.4<small>K</small></div><div class="l">Tasks</div></div>
+    <div class="stat"><div class="n" data-n="8">8</div><div class="l">Baselines</div></div>
+    <div class="stat"><div class="n" data-n="5">5<small>&times;</small></div><div class="l">Faster</div></div>
+    <div class="stat key"><div class="n" data-n="92.4" data-dec="1">92.4<small>%</small></div><div class="l">Headline metric</div></div>
   </div>
 
   <!-- ===== MODULE: section with a figure — numbered heading, wide figure, caption, prose ===== -->
   <section class="sec" id="method">
-    <h2><span class="sn">01</span>From four frames to one rule</h2>
+    <h2><span class="sn">01</span>Method</h2>
     <figure class="fig">
-      <img class="frame" src="assets/media/teaser.svg" width="960" height="440" alt="Three panels: four observed grid snapshots, the recovered rule B3/S23, and a rollout 29 steps later" loading="lazy">
-      <figcaption><b>Figure 1.</b> Rulebook observes four consecutive frames, searches the space of outer-totalistic rules for the one that explains every observed transition, and rolls the world forward with it. No gradient steps, no further data.</figcaption>
+      <img class="frame" src="assets/media/figure-wide.svg" width="960" height="440" alt="Describe the figure for screen readers" loading="lazy">
+      <figcaption><b>Figure 1.</b> A caption that explains what the reader should notice. Replace <code>assets/media/figure-wide.svg</code> with your teaser; PNG, JPG, SVG and WebP all work.</figcaption>
     </figure>
-    <h3 class="subh">Search, don&rsquo;t regress</h3>
+    <h3 class="subh">A subsection heading</h3>
     <div class="prose">
-      <p>Each candidate rule maps a cell and its eight neighbors to the cell&rsquo;s next state. Instead of fitting a network to approximate that map, Rulebook enumerates the <code>2<sup>18</sup></code> outer-totalistic rules and keeps those consistent with every observed transition, breaking ties with a simplicity prior.</p>
-      <p>Because the output is a symbolic rule, it can be read, verified, and run at any grid size. Write as much here as your method needs; <a href="#results">links</a>, <b>bold</b>, and <code>inline code</code> are styled.</p>
+      <p>Explain the method in plain paragraphs. Section headings get a mono number on the left; change it in the <code>.sn</code> span, or delete the span.</p>
+      <p>Inline styles are ready: <a href="#results">links</a>, <b>bold</b>, <em>italics</em> and <code>inline code</code>.</p>
     </div>
   </section>
 
   <!-- ===== MODULE: results — key numbers, video, side-by-side figures, callout ===== -->
   <section class="sec" id="results">
-    <h2><span class="sn">02</span>Rollouts that don&rsquo;t drift</h2>
+    <h2><span class="sn">02</span>Results</h2>
+    <!-- three findings: a big number, a short title, one or two lines of context -->
     <div class="keys">
       <div>
-        <div class="big key">11<sub>/12</sub></div>
-        <div class="kt">Exact rule recovered</div>
-        <p>From four frames, Rulebook returns the ground-truth rule in eleven of twelve worlds; the twelfth is an equivalent rule on the observed states.</p>
+        <div class="big key">92.4<sub>%</sub></div>
+        <div class="kt">Your main finding</div>
+        <p>One or two lines on what the number means and what it is compared against.</p>
       </div>
       <div>
-        <div class="big">25&times;</div>
-        <div class="kt">Longer stable rollouts</div>
-        <p>Neural simulators fall below 90% cell accuracy after about 20 steps. Rulebook stays above 99% for 500.</p>
+        <div class="big">5&times;</div>
+        <div class="kt">A second finding</div>
+        <p>Keep each finding to a single claim, so the three read as a set.</p>
       </div>
       <div>
         <div class="big">0.4<sub>s</sub></div>
-        <div class="kt">On a laptop CPU</div>
-        <p>The full search over 262,144 rules runs in under half a second, with no training run.</p>
+        <div class="kt">A third finding</div>
+        <p>Units go in a <code>&lt;sub&gt;</code> so they sit small next to the number.</p>
       </div>
     </div>
 
-    <h3 class="subh">A 500-step rollout</h3>
+    <h3 class="subh">Video</h3>
     <!-- data-autoplay: muted loop that plays only while on screen -->
     <figure class="fig">
-      <video class="frame" src="assets/media/rollout.mp4" poster="assets/media/rollout-poster.jpg" width="960" height="540" data-autoplay loop muted playsinline preload="metadata" aria-label="Animated rollout of the recovered rule"></video>
-      <figcaption><b>Video 1.</b> The recovered rule rolled out on a 96&times;54 torus. Use a <code>&lt;video&gt;</code> for clips you host, or the <code>.embed</code> wrapper below for YouTube.</figcaption>
+      <video class="frame" src="assets/media/placeholder.mp4" poster="assets/media/placeholder-poster.jpg" width="960" height="540" data-autoplay loop muted playsinline preload="metadata" aria-label="Describe the video"></video>
+      <figcaption><b>Video 1.</b> Use a <code>&lt;video&gt;</code> for clips you host. With <code>data-autoplay</code> it plays muted and only while on screen.</figcaption>
     </figure>
     <!-- YouTube / Vimeo: uncomment and paste the embed URL
     <div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="Project video" allowfullscreen loading="lazy"></iframe></div>
     -->
 
     <h3 class="subh">Side by side</h3>
+    <!-- .fig-row lays out two or more figures in columns and stacks them on phones -->
     <div class="fig-row">
       <figure class="fig">
-        <img class="frame" src="assets/media/rollout-poster.jpg" width="960" height="540" alt="Rulebook rollout at step 40" loading="lazy">
-        <figcaption><b>(a) Rulebook</b>, step 40. Identical to ground truth.</figcaption>
+        <img class="frame" src="assets/media/figure-a.svg" width="960" height="540" alt="Describe figure (a)" loading="lazy">
+        <figcaption><b>(a) Your method.</b> A short caption for each panel.</figcaption>
       </figure>
       <figure class="fig">
-        <img class="frame" src="assets/media/rollout-poster.jpg" width="960" height="540" alt="Baseline rollout at step 40" loading="lazy" style="filter:blur(2px) saturate(.4)">
-        <figcaption><b>(b) Neural baseline</b>, step 40. Structure has dissolved.</figcaption>
+        <img class="frame" src="assets/media/figure-b.svg" width="960" height="540" alt="Describe figure (b)" loading="lazy">
+        <figcaption><b>(b) Baseline.</b> Add a third figure and the row makes room.</figcaption>
       </figure>
     </div>
 
     <div class="callout">
       <div class="cl">Takeaway</div>
-      <p>When a world is generated by a short program, recovering the program beats imitating its output, by orders of magnitude in data and in rollout length.</p>
+      <p>The one sentence you want readers to repeat after they close the tab.</p>
     </div>
   </section>
 
@@ -200,10 +204,10 @@
     <h2><span class="sn">03</span>Cite this work</h2>
     <div class="citebox">
       <button type="button" class="copy">Copy</button>
-      <pre>@inproceedings{example2026rulebook,
-  title     = {Rulebook: Learning the Rules of a World from a Handful of Frames},
-  author    = {Example, Ada and Placeholder, Ben and Sample, Chiara and Demo, Dev},
-  booktitle = {Conference on Example Learning},
+      <pre>@inproceedings{author2026paper,
+  title     = {Paper Title: A Short, Memorable Subtitle},
+  author    = {Author, First and Author, Second and Author, Third and Author, Last},
+  booktitle = {Conference Name},
   year      = {2026}
 }</pre>
     </div>
@@ -213,11 +217,11 @@
 
   <!-- ===== MODULE: footer — keep the Masthead credit if the template helped you ===== -->
   <footer>
-    <div class="fb"><img src="assets/logo.svg" alt="" width="21" height="21">Rulebook</div>
-    <div class="fl"><span>Example University</span><span>CEL 2026 Spotlight</span></div>
+    <div class="fb"><img src="assets/logo.svg" alt="" width="21" height="21">Project Name</div>
+    <div class="fl"><span>First Institution</span><span>Conference Name 2026</span></div>
     <div class="fr">
       <a href="https://arxiv.org/abs/0000.00000" target="_blank" rel="noopener">Paper</a>
-      <a href="https://github.com/example/rulebook" target="_blank" rel="noopener">Code</a>
+      <a href="https://github.com/your-username/your-project" target="_blank" rel="noopener">Code</a>
     </div>
     <p class="credit">Page built with <a href="https://github.com/AntiQuality/masthead-project-page-template" target="_blank" rel="noopener">Masthead</a>.</p>
   </footer>
