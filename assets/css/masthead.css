@@ -148,9 +148,8 @@ footer .fr a:hover{color:var(--ink)}
 /* ---- results table ----------------------------------------------------- */
 .tbl-wrap{overflow-x:auto;margin:0 0 30px}
 .tbl{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;min-width:520px}
-.tbl th,.tbl td{padding:10px 12px;border-bottom:1px solid var(--hair);text-align:right}
-.tbl th:first-child,.tbl td:first-child{text-align:left;padding-left:0}
-.tbl th:last-child,.tbl td:last-child{padding-right:0}
+.tbl th,.tbl td{padding:10px 16px;border-bottom:1px solid var(--hair);text-align:right}
+.tbl th:first-child,.tbl td:first-child{text-align:left}
 .tbl thead th{font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--rule);white-space:nowrap;vertical-align:bottom}
 .tbl td{font-family:var(--mono);font-size:13.5px}
 .tbl td:first-child{font-family:var(--display);font-weight:500;font-size:14px;min-width:10em}
@@ -160,9 +159,11 @@ footer .fr a:hover{color:var(--ink)}
 .tbl tbody tr:last-child td{border-bottom:1px solid var(--rule)}
 .tbl tbody tr.best td{background:var(--accent-soft)}
 .tbl tbody tr:hover td{background:color-mix(in srgb,var(--ink) 4%,transparent)}
-.tbl th[data-sort]{cursor:pointer;user-select:none}
+.tbl th[data-sort]{cursor:pointer;user-select:none;position:relative}
 .tbl th[data-sort]:hover,.tbl th[aria-sort]{color:var(--ink)}
-.tbl th .ar{display:inline-block;width:11px;font-size:9px;margin-left:4px;vertical-align:1px;text-align:left}
+/* sort arrow sits in the cell padding, so header text lines up with the column values */
+.tbl th .ar{position:absolute;right:3px;bottom:12px;font-size:8px;line-height:1}
+.tbl th:first-child .ar{right:auto;left:calc(100% - 13px)}
 .tbl-note{font-size:13.5px;color:var(--muted);margin:12px 0 0;max-width:72ch}
 
 /* ---- bar chart: <div class="chart"> with --v (value) per .bar ----------- */
