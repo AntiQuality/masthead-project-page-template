@@ -1,11 +1,11 @@
-/* Masthead — page behavior. No dependencies; every feature is optional.
+/* Masthead page behavior. No dependencies, and every feature is optional.
    Without JS the page is fully readable: nothing starts hidden. */
 (function () {
   var root = document.documentElement;
   var reduced = (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) || /[?&]static\b/.test(location.search);
 
-  // Theme toggle. The <head> snippet applies a saved choice before first paint;
-  // this keeps html.dark in sync (for the icon) and flips light <-> dark on click.
+  // Theme toggle. The <head> snippet applies a saved choice before first paint.
+  // This keeps html.dark in sync (for the icon) and flips between light and dark on click.
   var darkMq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
   function isDark() {
     var t = root.getAttribute('data-theme');
@@ -50,7 +50,7 @@
   }
 
   // Sortable tables: put data-sort on a <th> ("num" or "text"). Rows stay readable without JS.
-  // A cell's data-v overrides its text as the sort value (e.g. "—" cells or formatted numbers).
+  // A cell's data-v overrides its text as the sort value (e.g. "n/a" cells or formatted numbers).
   [].forEach.call(document.querySelectorAll('table.tbl'), function (table) {
     var body = table.tBodies[0];
     var heads = [].slice.call(table.querySelectorAll('th[data-sort]'));
@@ -86,7 +86,7 @@
   });
 
   // Motion: scroll reveals, stat count-up, bar growth. Skipped under prefers-reduced-motion.
-  // Add data-reveal to any element to opt it in; the defaults below cover the stock modules.
+  // Add data-reveal to any element to opt it in. The defaults below cover the stock modules.
   var charts = document.querySelectorAll('.chart');
   if ('IntersectionObserver' in window && !reduced) {
     var rvSel = '.hero .lead, .hero-crest, .reslist .btn, .byline, .stat, .lede, .abs-grid .prose, .sec>h2, .sec .fig, .sec .fig-row, .keys>div, .callout, .citebox, .tbl-wrap, .chart, .pair>*, .case, [data-reveal]';

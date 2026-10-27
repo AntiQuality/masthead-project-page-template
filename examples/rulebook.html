@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
-  Masthead — a project page template for research papers.
+  Masthead, an academic project page template for research papers.
   Everything you need to edit is marked with MODULE comments below.
   Colors and fonts: assets/css/tokens.css. Delete any module you don't need.
 -->
@@ -71,7 +71,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/tokens.css">
 <link rel="stylesheet" href="../assets/css/masthead.css">
-<!-- demo only: ?theme=gazette | lab | mono previews a preset -->
+<!-- demo only: ?theme=gazette, ?theme=lab or ?theme=mono previews a preset -->
 <script>
   (function () {
     var m = location.search.match(/[?&]theme=(gazette|lab|mono)\b/);
@@ -86,7 +86,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
 
-  <!-- ===== MODULE: top bar — brand + section links (one link per section id) ===== -->
+  <!-- ===== MODULE: top bar. Brand + section links (one link per section id) ===== -->
   <header class="top">
     <div class="top-in">
       <a class="brand" href="#top"><img src="../assets/logo.svg" alt="" width="25" height="25">Rulebook</a>
@@ -108,13 +108,13 @@
 
   <main id="main">
 
-  <!-- ===== MODULE: hero — venue, title, one-paragraph pitch, resource links, authors ===== -->
+  <!-- ===== MODULE: hero. Venue, title, one-paragraph pitch, resource links, authors ===== -->
   <section class="hero" id="top">
     <p class="eyebrow"><span class="badge">Spotlight</span>Conference on Example Learning 2026</p>
     <div class="title-row">
       <!-- wrap one word in <span class="hl"> for the accent underline -->
       <h1 class="title">Learning the rules from a <span class="hl">handful</span> of frames</h1>
-      <!-- optional logo / crest; delete the <img> if you don't have one -->
+      <!-- optional logo or crest. Delete the <img> if you don't have one -->
       <img class="hero-crest" src="../assets/logo.svg" alt="Rulebook logo: a glider pattern" width="150" height="150">
     </div>
     <div class="hero-grid">
@@ -151,7 +151,7 @@
     </div>
   </section>
 
-  <!-- ===== MODULE: abstract — a one-line hook on the left, the abstract on the right ===== -->
+  <!-- ===== MODULE: abstract. A one-line hook on the left, the abstract on the right ===== -->
   <section class="sec abstract" id="abstract">
     <div class="abs-grid">
       <p class="lede">Most world models learn to <em>imitate</em> what happens next. Rulebook learns <span class="hl">why</span> it happens.</p>
@@ -162,7 +162,7 @@
     </div>
   </section>
 
-  <!-- ===== MODULE: stats strip — 3 to 6 headline numbers (data-n counts up on scroll) ===== -->
+  <!-- ===== MODULE: stats strip. 3 to 6 headline numbers (data-n counts up on scroll) ===== -->
   <div class="stats">
     <div class="stat"><div class="n" data-n="4">4</div><div class="l">Frames observed</div></div>
     <div class="stat"><div class="n" data-n="262">262<small>K</small></div><div class="l">Rules searched</div></div>
@@ -171,7 +171,7 @@
     <div class="stat key"><div class="n" data-n="99.7" data-dec="1">99.7<small>%</small></div><div class="l">Cell accuracy at t = 500</div></div>
   </div>
 
-  <!-- ===== MODULE: section with a figure — numbered heading, wide figure, caption, prose ===== -->
+  <!-- ===== MODULE: section with a figure. Numbered heading, wide figure, caption, prose ===== -->
   <section class="sec" id="method">
     <h2><span class="sn">01</span>From four frames to one rule</h2>
     <figure class="fig">
@@ -187,9 +187,9 @@
     <h3 class="subh">One digit apart</h3>
     <div class="pair">
       <div class="card">
-        <div class="ct">Life &middot; B3/S23</div>
+        <div class="ct">Life: B3/S23</div>
         <p class="q"><span class="who">frames:</span> four snapshots of a soup settling into blinkers and blocks. A cell is <b>born with exactly 3</b> live neighbors.</p>
-        <div class="r">Rulebook returns <b>B3/S23</b>; so does every rule-agnostic baseline, in effect, because Life is what they were tuned on.</div>
+        <div class="r">Rulebook returns <b>B3/S23</b>, and in effect so does every rule-agnostic baseline, because Life is what they were tuned on.</div>
       </div>
       <div class="delta">
         <div class="dsym">&delta;</div>
@@ -197,21 +197,21 @@
         <div>births on 6 too</div>
       </div>
       <div class="card hi">
-        <div class="ct">HighLife &middot; B36/S23</div>
+        <div class="ct">HighLife: B36/S23</div>
         <p class="q"><span class="who">frames:</span> four snapshots that look almost identical. One cell is <b>born with 6</b> neighbors, once.</p>
-        <div class="r">That single transition rules out B3/S23. Rulebook returns <b>B36/S23</b>; neural simulators average it away.</div>
+        <div class="r">That single transition rules out B3/S23. Rulebook returns <b>B36/S23</b>, while neural simulators average it away.</div>
       </div>
     </div>
   </section>
 
-  <!-- ===== MODULE: results — key numbers, video, side-by-side figures, callout ===== -->
+  <!-- ===== MODULE: results. Key numbers, video, side-by-side figures, callout ===== -->
   <section class="sec" id="results">
     <h2><span class="sn">02</span>Rollouts that don&rsquo;t drift</h2>
     <div class="keys">
       <div>
         <div class="big key">11<sub>/12</sub></div>
         <div class="kt">Exact rule recovered</div>
-        <p>From four frames, Rulebook returns the ground-truth rule in eleven of twelve worlds; the twelfth is an equivalent rule on the observed states.</p>
+        <p>From four frames, Rulebook returns the ground-truth rule in eleven of twelve worlds. The twelfth is an equivalent rule on the observed states.</p>
       </div>
       <div>
         <div class="big">25&times;</div>
@@ -234,9 +234,9 @@
         <tbody>
           <tr class="best"><td>Rulebook<small>ours</small></td><td data-v="11"><b>11 / 12</b></td><td><b>99.9</b></td><td><b>99.7</b></td><td><b>4</b></td><td data-v="0.4"><b>0.4 s</b></td></tr>
           <tr><td>Rulebook<small>no simplicity prior</small></td><td data-v="8">8 / 12</td><td>97.2</td><td>95.1</td><td>4</td><td data-v="0.4">0.4 s</td></tr>
-          <tr><td>Neural CA<small>Example et al., 2024</small></td><td class="dim" data-v="">&mdash;</td><td>84.6</td><td>61.8</td><td data-v="4000">4K</td><td data-v="18720">5.2 h</td></tr>
-          <tr><td>Transformer world model<small>Sample et al., 2025</small></td><td class="dim" data-v="">&mdash;</td><td>79.9</td><td>55.4</td><td data-v="4000">4K</td><td data-v="35280">9.8 h</td></tr>
-          <tr><td>ConvLSTM<small>Placeholder et al., 2015</small></td><td class="dim" data-v="">&mdash;</td><td>71.3</td><td>52.0</td><td data-v="4000">4K</td><td data-v="11160">3.1 h</td></tr>
+          <tr><td>Neural CA<small>Example et al., 2024</small></td><td class="dim" data-v="">n/a</td><td>84.6</td><td>61.8</td><td data-v="4000">4K</td><td data-v="18720">5.2 h</td></tr>
+          <tr><td>Transformer world model<small>Sample et al., 2025</small></td><td class="dim" data-v="">n/a</td><td>79.9</td><td>55.4</td><td data-v="4000">4K</td><td data-v="35280">9.8 h</td></tr>
+          <tr><td>ConvLSTM<small>Placeholder et al., 2015</small></td><td class="dim" data-v="">n/a</td><td>71.3</td><td>52.0</td><td data-v="4000">4K</td><td data-v="11160">3.1 h</td></tr>
         </tbody>
       </table>
     </div>
@@ -297,7 +297,7 @@
     <h2><span class="sn">03</span>The replicator</h2>
     <div class="case">
       <h3 class="case-h">HighLife, seeded with a replicator</h3>
-      <div class="case-q"><span class="cq-label">Input &middot; 4 frames, 64&times;64</span>A HighLife soup in which a <mark>replicator</mark> copies itself every 12 steps. Only one of the 3 observed transitions involves a <code>B6</code> birth.</div>
+      <div class="case-q"><span class="cq-label">Input: 4 frames, 64&times;64</span>A HighLife soup in which a <mark>replicator</mark> copies itself every 12 steps. Only one of the 3 observed transitions involves a <code>B6</code> birth.</div>
       <div class="trig"><span>&#9888;</span><p><b>Why it is hard:</b> the frames are 99.98% consistent with Life. Any method that weighs transitions by frequency will treat the one B6 birth as noise.</p></div>
       <div class="lanes">
         <div class="lane good">
@@ -307,7 +307,7 @@
               <div class="ts"><i></i><div><code>enumerate 2<sup>18</sup> rules</code><small>14 consistent with every transition</small></div></div>
               <div class="ts"><i></i><div><code>simplicity prior</code><small>shortest consistent rule wins</small></div></div>
             </div>
-            <div class="lmark"><i></i><span>B36/S23 &middot; exact</span><i></i></div>
+            <div class="lmark"><i></i><span>B36/S23, exact</span><i></i></div>
             <div class="lq">Replicator still copying itself at step 500, <b>41 copies</b>, matching ground truth cell for cell.</div>
             <div class="lcons"><span>&#10003;</span>One transition was enough to rule out Life.</div>
           </div>
@@ -319,7 +319,7 @@
               <div class="ts"><i></i><div><code>fit on 4K frames</code><small>5.2 h on one GPU</small></div></div>
               <div class="ts crit"><i></i><div><code>step 37</code><small>first missed B6 birth</small></div></div>
             </div>
-            <div class="lmark"><i></i><span>Drifts &middot; step 40+</span><i></i></div>
+            <div class="lmark"><i></i><span>Drifts after step 40</span><i></i></div>
             <div class="lq">The replicator copies itself twice, then <b>stalls into a still life</b>.</div>
             <div class="lcons"><span>~</span>Learned Life plus noise, not HighLife.</div>
           </div>
@@ -331,7 +331,7 @@
               <div class="ts"><i></i><div><code>fit on 4K frames</code><small>3.1 h on one GPU</small></div></div>
               <div class="ts crit"><i></i><div><code>step 12</code><small>replicator blurs out</small></div></div>
             </div>
-            <div class="lmark"><i></i><span>Collapses &middot; step 15</span><i></i></div>
+            <div class="lmark"><i></i><span>Collapses at step 15</span><i></i></div>
             <div class="lq">By step 100 the grid is a <b>grey haze</b> of half-alive cells.</div>
             <div class="lcons"><span>&#10007;</span>Averages over futures instead of picking one.</div>
           </div>
@@ -345,7 +345,7 @@
     </div>
   </section>
 
-  <!-- ===== MODULE: cite — paste your BibTeX inside <pre> ===== -->
+  <!-- ===== MODULE: cite. Paste your BibTeX inside <pre> ===== -->
   <section class="sec" id="cite">
     <h2><span class="sn">04</span>Cite this work</h2>
     <div class="citebox">
@@ -361,11 +361,11 @@
 
   </main>
 
-  <!-- ===== MODULE: footer — keep the Masthead credit if the template helped you ===== -->
+  <!-- ===== MODULE: footer. Keep the Masthead credit if the template helped you ===== -->
   <!-- Like this page? It uses Masthead, an academic project page template (MIT):
        https://github.com/AntiQuality/masthead-project-page-template
        adapted from the AgentAbstain project page (https://agentabstain.github.io).
-       You are free to reuse it; we just ask for a link back to Masthead in the footer. -->
+       You are free to reuse it. We just ask for a link back to Masthead in the footer. -->
   <footer>
     <div class="fb"><img src="../assets/logo.svg" alt="" width="21" height="21">Rulebook</div>
     <div class="fl"><span>Example University</span><span>CEL 2026 Spotlight</span></div>
@@ -373,11 +373,11 @@
       <a href="https://arxiv.org/abs/0000.00000" target="_blank" rel="noopener">Paper</a>
       <a href="https://github.com/example/rulebook" target="_blank" rel="noopener">Code</a>
     </div>
-    <!-- the credit line: keep it if Masthead helped you; the second sentence asks anyone who copies your page to do the same -->
-    <p class="credit">This page was built with <a href="https://github.com/AntiQuality/masthead-project-page-template" target="_blank" rel="noopener">Masthead</a>, an academic project page template adapted from the <a href="https://agentabstain.github.io" target="_blank" rel="noopener">AgentAbstain</a> project page. You are free to borrow the source code of this page; we just ask that you link back to Masthead in the footer. The template is released under the <a href="https://github.com/AntiQuality/masthead-project-page-template/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>.</p>
+    <!-- the credit line: keep it if Masthead helped you. The second sentence asks anyone who copies your page to do the same -->
+    <p class="credit">This page was built with <a href="https://github.com/AntiQuality/masthead-project-page-template" target="_blank" rel="noopener">Masthead</a>, an academic project page template adapted from the <a href="https://agentabstain.github.io" target="_blank" rel="noopener">AgentAbstain</a> project page. You are free to borrow the source code of this page. We just ask that you link back to Masthead in the footer. The template is released under the <a href="https://github.com/AntiQuality/masthead-project-page-template/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>.</p>
   </footer>
 </div>
-<!-- back-to-top button: appears after the first screen; delete to remove -->
+<!-- back-to-top button: appears after the first screen. Delete it to remove -->
 <a class="to-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 19V5M5.5 11.5L12 5l6.5 6.5"/></svg></a>
 <script src="../assets/js/masthead.js" defer></script>
 </body>

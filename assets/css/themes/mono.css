@@ -1,4 +1,4 @@
-/* Masthead theme preset — Mono: quiet greyscale with one signal color. Geist and Geist Mono, vermilion accent.
+/* Masthead theme preset. Mono: quiet greyscale with one signal color. Geist and Geist Mono, vermilion accent.
    Use: add after tokens.css in <head>
      <link rel="stylesheet" href="assets/css/themes/mono.css">
    It loads its own fonts, so you can drop the default Google Fonts <link>. */

@@ -10,7 +10,7 @@ An editorial project page template for research papers. Plain HTML, CSS and JS: 
 2. Edit `index.html`: every block is marked with a `MODULE` comment, so delete what you don't need.
 3. Change colors and fonts in `assets/css/tokens.css`. Light and dark mode are both defined there.
 4. Replace the placeholder figures and video in `assets/media/`.
-5. Turn on GitHub Pages for the repo (Settings → Pages → deploy from `main`).
+5. Turn on GitHub Pages for the repo: in Settings, open Pages and deploy from `main`.
 
 Want to see a finished page first? [`examples/rulebook.html`](examples/rulebook.html) is the same template filled in for a fictional paper. Delete the `examples/` folder when you start your own.
 

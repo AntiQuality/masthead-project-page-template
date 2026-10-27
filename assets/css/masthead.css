@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Masthead — components
+   Masthead components
    Colors and fonts live in tokens.css; this file only uses the variables.
    Each block below matches one copyable module in index.html.
    ========================================================================== */
@@ -75,7 +75,7 @@ html.js h1.title .hl{background-size:0% 3px;animation:uline .8s cubic-bezier(.3,
 .stat{padding:24px 16px;border-right:1px solid var(--hair);min-width:0}
 .stat:first-child{padding-left:0}
 .stat:last-child{border-right:0;padding-right:0}
-/* keep values short (262K, not 262144); masthead.js shrinks any that still overflow their cell */
+/* keep values short (262K, not 262144). masthead.js shrinks any that still overflow their cell */
 .stat .n{font-family:var(--display);font-size:clamp(34px,4vw,48px);white-space:nowrap;font-weight:500;letter-spacing:-0.03em;line-height:1;font-variant-numeric:tabular-nums}
 .stat .n small{font-size:0.55em}
 .stat.key .n{color:var(--accent)}

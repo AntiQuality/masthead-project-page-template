@@ -1,4 +1,4 @@
-/* Masthead theme preset — Gazette: serif newsprint. Fraunces headlines, Source Serif body, oxblood accent.
+/* Masthead theme preset. Gazette: serif newsprint. Fraunces headlines, Source Serif body, oxblood accent.
    Use: add after tokens.css in <head>
      <link rel="stylesheet" href="assets/css/themes/gazette.css">
    It loads its own fonts, so you can drop the default Google Fonts <link>. */
