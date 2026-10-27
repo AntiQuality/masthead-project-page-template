@@ -34,6 +34,21 @@
     });
   });
 
+  // Stat numbers that are too wide for their cell get scaled down to fit (the HTML holds the final value).
+  var statNums = [].slice.call(document.querySelectorAll('.stat .n'));
+  function fitStats() {
+    statNums.forEach(function (el) {
+      el.style.fontSize = '';
+      var room = el.parentNode.clientWidth - parseFloat(getComputedStyle(el.parentNode).paddingLeft) - parseFloat(getComputedStyle(el.parentNode).paddingRight);
+      if (el.scrollWidth > room) el.style.fontSize = (parseFloat(getComputedStyle(el).fontSize) * room / el.scrollWidth) + 'px';
+    });
+  }
+  if (statNums.length) {
+    fitStats();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitStats);
+    var fitT; window.addEventListener('resize', function () { clearTimeout(fitT); fitT = setTimeout(fitStats, 100); });
+  }
+
   // Motion: scroll reveals and stat count-up. Skipped under prefers-reduced-motion.
   // Add data-reveal to any element to opt it in; the defaults below cover the stock modules.
   if ('IntersectionObserver' in window && !reduced) {

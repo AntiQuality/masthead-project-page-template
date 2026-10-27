@@ -72,10 +72,11 @@ html.js h1.title .hl{background-size:0% 3px;animation:uline .8s cubic-bezier(.3,
 
 /* ---- stats strip ------------------------------------------------------- */
 .stats{margin:clamp(16px,2.5vw,26px) 0 0;border-top:2px solid var(--rule);border-bottom:1px solid var(--rule);display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
-.stat{padding:24px 16px;border-right:1px solid var(--hair)}
+.stat{padding:24px 16px;border-right:1px solid var(--hair);min-width:0}
 .stat:first-child{padding-left:0}
 .stat:last-child{border-right:0;padding-right:0}
-.stat .n{font-family:var(--display);font-size:clamp(34px,4vw,48px);font-weight:500;letter-spacing:-0.03em;line-height:1;font-variant-numeric:tabular-nums}
+/* keep values short (262K, not 262144); masthead.js shrinks any that still overflow their cell */
+.stat .n{font-family:var(--display);font-size:clamp(34px,4vw,48px);white-space:nowrap;font-weight:500;letter-spacing:-0.03em;line-height:1;font-variant-numeric:tabular-nums}
 .stat .n small{font-size:0.55em}
 .stat.key .n{color:var(--accent)}
 .stat .l{font-size:12px;color:var(--muted);margin-top:8px}
