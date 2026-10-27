@@ -142,7 +142,7 @@ footer .fl span{display:inline-block;margin-right:14px}
 footer .fr{display:flex;gap:18px}
 footer .fr a{color:var(--muted);text-decoration:none}
 footer .fr a:hover{color:var(--ink)}
-.credit{width:100%;font-size:12px;color:var(--muted);margin:0}
+.credit{width:100%;max-width:78ch;font-size:12px;line-height:1.6;color:var(--muted);margin:0}
 .credit a{text-underline-offset:3px;text-decoration-thickness:1px}
 .credit a:hover{color:var(--ink)}
 
