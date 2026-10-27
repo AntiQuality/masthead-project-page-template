@@ -1,14 +1,26 @@
+<div align="center">
+
+<img src="assets/logo.svg" width="72" height="72" alt="Masthead logo">
+
 # Masthead
 
-**An editorial project page template for research papers.** Plain HTML, CSS and JavaScript. No build step, no dependencies, and it runs on GitHub Pages as is.
+**An academic project page template for research papers.**<br>
+Plain HTML, CSS and JavaScript. No build step, no dependencies, and it runs on GitHub Pages as is.
 
-[Live demo](https://antiquality.github.io/masthead-project-page-template/) &nbsp;&nbsp; [Use this template](https://github.com/AntiQuality/masthead-project-page-template/generate) &nbsp;&nbsp; [Real example: AgentAbstain](https://agentabstain.github.io)
+[![License: MIT](https://img.shields.io/badge/license-MIT-191712)](LICENSE)
+[![No build step](https://img.shields.io/badge/build-none-2b55c9)](#quick-start)
+[![Lighthouse 100](https://img.shields.io/badge/Lighthouse-100-0b7a55)](#why-masthead)
+[![Dark mode](https://img.shields.io/badge/dark%20mode-yes-15140f)](#theme-presets)
 
-![Masthead in light and dark mode](.github/screenshots/hero.png)
+**[Live demo](https://antiquality.github.io/masthead-project-page-template/)** &nbsp;&nbsp; **[Use this template](https://github.com/AntiQuality/masthead-project-page-template/generate)** &nbsp;&nbsp; **[Real example: AgentAbstain](https://agentabstain.github.io)**
+
+<img src=".github/screenshots/hero.png" alt="Masthead in light and dark mode" width="100%">
+
+</div>
 
 ## Why Masthead
 
-- **Looks like a front page, not a slide.** Big editorial type, hairline rules and a paper-and-ink palette that puts your title first.
+- **Looks like a front page, not a slide.** Big newspaper-style type, hairline rules and a paper-and-ink palette that puts your title first.
 - **Light and dark mode built in.** It follows the reader's system setting, and a toggle in the top bar remembers their choice.
 - **Results that read like results.** A sortable table, a bar chart drawn in plain HTML and CSS, three key numbers and a case study layout that compares methods step by step.
 - **Fast and accessible.** Lighthouse scores 100 for performance, accessibility, best practices and SEO, on mobile and desktop. The whole page is about 17 KB gzipped before fonts and figures.
