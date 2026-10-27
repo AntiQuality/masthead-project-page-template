@@ -43,6 +43,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/tokens.css">
 <link rel="stylesheet" href="../assets/css/masthead.css">
+<!-- demo only: ?theme=gazette | lab | mono previews a preset -->
+<script>
+  (function () {
+    var m = location.search.match(/[?&]theme=(gazette|lab|mono)\b/);
+    if (!m) return;
+    var l = document.createElement('link');
+    l.rel = 'stylesheet'; l.href = '../assets/css/themes/' + m[1] + '.css';
+    document.head.appendChild(l);
+  })();
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -57,6 +67,7 @@
           <a href="#abstract">Abstract</a>
           <a href="#method">Method</a>
           <a href="#results">Results</a>
+          <a href="#cases">Cases</a>
           <a href="#cite">Cite</a>
         </nav>
         <button class="theme" type="button" aria-label="Toggle dark mode">
@@ -144,6 +155,25 @@
       <p>Each candidate rule maps a cell and its eight neighbors to the cell&rsquo;s next state. Instead of fitting a network to approximate that map, Rulebook enumerates the <code>2<sup>18</sup></code> outer-totalistic rules and keeps those consistent with every observed transition, breaking ties with a simplicity prior.</p>
       <p>Because the output is a symbolic rule, it can be read, verified, and run at any grid size. The same rule runs unchanged on a 12&times;12 grid or a 4096&times;4096 one.</p>
     </div>
+
+    <h3 class="subh">One digit apart</h3>
+    <div class="pair">
+      <div class="card">
+        <div class="ct">Life &middot; B3/S23</div>
+        <p class="q"><span class="who">frames:</span> four snapshots of a soup settling into blinkers and blocks. A cell is <b>born with exactly 3</b> live neighbors.</p>
+        <div class="r">Rulebook returns <b>B3/S23</b>; so does every rule-agnostic baseline, in effect, because Life is what they were tuned on.</div>
+      </div>
+      <div class="delta">
+        <div class="dsym">&delta;</div>
+        <div class="sym"></div>
+        <div>births on 6 too</div>
+      </div>
+      <div class="card hi">
+        <div class="ct">HighLife &middot; B36/S23</div>
+        <p class="q"><span class="who">frames:</span> four snapshots that look almost identical. One cell is <b>born with 6</b> neighbors, once.</p>
+        <div class="r">That single transition rules out B3/S23. Rulebook returns <b>B36/S23</b>; neural simulators average it away.</div>
+      </div>
+    </div>
   </section>
 
   <!-- ===== MODULE: results — key numbers, video, side-by-side figures, callout ===== -->
@@ -165,6 +195,49 @@
         <div class="kt">On a laptop CPU</div>
         <p>The full search over 262,144 rules runs in under half a second, with no training run.</p>
       </div>
+    </div>
+
+    <h3 class="subh">All twelve worlds</h3>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead>
+          <tr><th data-sort="text">Method</th><th data-sort="num">Exact rule</th><th data-sort="num">Acc. @100 &uarr;</th><th data-sort="num">Acc. @500 &uarr;</th><th data-sort="num">Frames seen</th><th data-sort="num">Fit time</th></tr>
+        </thead>
+        <tbody>
+          <tr class="best"><td>Rulebook<small>ours</small></td><td data-v="11"><b>11 / 12</b></td><td><b>99.9</b></td><td><b>99.7</b></td><td><b>4</b></td><td data-v="0.4"><b>0.4 s</b></td></tr>
+          <tr><td>Rulebook<small>no simplicity prior</small></td><td data-v="8">8 / 12</td><td>97.2</td><td>95.1</td><td>4</td><td data-v="0.4">0.4 s</td></tr>
+          <tr><td>Neural CA<small>Example et al., 2024</small></td><td class="dim" data-v="">&mdash;</td><td>84.6</td><td>61.8</td><td data-v="4000">4K</td><td data-v="18720">5.2 h</td></tr>
+          <tr><td>Transformer world model<small>Sample et al., 2025</small></td><td class="dim" data-v="">&mdash;</td><td>79.9</td><td>55.4</td><td data-v="4000">4K</td><td data-v="35280">9.8 h</td></tr>
+          <tr><td>ConvLSTM<small>Placeholder et al., 2015</small></td><td class="dim" data-v="">&mdash;</td><td>71.3</td><td>52.0</td><td data-v="4000">4K</td><td data-v="11160">3.1 h</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tbl-note">Cell accuracy (%) averaged over twelve worlds and five seeds. Neural methods output frames, not rules, so &ldquo;exact rule&rdquo; does not apply.</p>
+
+    <div class="chart" role="figure" aria-label="Cell accuracy at 10, 100 and 500 steps for three methods">
+      <div class="chart-top">
+        <div class="chart-t">Cell accuracy vs. rollout length<span>mean over 12 worlds</span></div>
+        <div class="legend">
+          <span class="lg s1"><i></i>Rulebook</span>
+          <span class="lg s2"><i></i>Neural CA</span>
+          <span class="lg s4"><i></i>ConvLSTM</span>
+        </div>
+      </div>
+      <div class="chart-scroll"><div class="chart-in">
+        <div class="plot" style="--ymax:100">
+          <div class="gl" style="--g:25"><span>25</span></div>
+          <div class="gl" style="--g:50"><span>50</span></div>
+          <div class="gl" style="--g:75"><span>75</span></div>
+          <div class="gl" style="--g:100"><span>100</span></div>
+          <div class="gl base" style="--g:0"><span>0</span></div>
+          <div class="groups">
+            <div class="grp"><div class="bar s1" style="--v:100;--i:0"><span class="bv">100</span></div><div class="bar s2" style="--v:96.8;--i:1"><span class="bv">96.8</span></div><div class="bar s4" style="--v:91.5;--i:2"><span class="bv">91.5</span></div></div>
+            <div class="grp"><div class="bar s1" style="--v:99.9;--i:3"><span class="bv">99.9</span></div><div class="bar s2" style="--v:84.6;--i:4"><span class="bv">84.6</span></div><div class="bar s4" style="--v:71.3;--i:5"><span class="bv">71.3</span></div></div>
+            <div class="grp"><div class="bar s1" style="--v:99.7;--i:6"><span class="bv">99.7</span></div><div class="bar s2" style="--v:61.8;--i:7"><span class="bv">61.8</span></div><div class="bar s4" style="--v:52.0;--i:8"><span class="bv">52.0</span></div></div>
+          </div>
+        </div>
+        <div class="xl"><span>10 steps</span><span>100 steps</span><span>500 steps</span></div>
+      </div></div>
     </div>
 
     <h3 class="subh">A 500-step rollout</h3>
@@ -192,9 +265,61 @@
     </div>
   </section>
 
+  <section class="sec" id="cases">
+    <h2><span class="sn">03</span>The replicator</h2>
+    <div class="case">
+      <h3 class="case-h">HighLife, seeded with a replicator</h3>
+      <div class="case-q"><span class="cq-label">Input &middot; 4 frames, 64&times;64</span>A HighLife soup in which a <mark>replicator</mark> copies itself every 12 steps. Only one of the 3 observed transitions involves a <code>B6</code> birth.</div>
+      <div class="trig"><span>&#9888;</span><p><b>Why it is hard:</b> the frames are 99.98% consistent with Life. Any method that weighs transitions by frequency will treat the one B6 birth as noise.</p></div>
+      <div class="lanes">
+        <div class="lane good">
+          <div class="lane-h"><span class="lv">&#10003;</span><div><b>Rulebook</b><small>Exact rule</small></div></div>
+          <div class="lane-b">
+            <div class="tl">
+              <div class="ts"><i></i><div><code>enumerate 2<sup>18</sup> rules</code><small>14 consistent with every transition</small></div></div>
+              <div class="ts"><i></i><div><code>simplicity prior</code><small>shortest consistent rule wins</small></div></div>
+            </div>
+            <div class="lmark"><i></i><span>B36/S23 &middot; exact</span><i></i></div>
+            <div class="lq">Replicator still copying itself at step 500, <b>41 copies</b>, matching ground truth cell for cell.</div>
+            <div class="lcons"><span>&#10003;</span>One transition was enough to rule out Life.</div>
+          </div>
+        </div>
+        <div class="lane warn">
+          <div class="lane-h"><span class="lv">~</span><div><b>Neural CA</b><small>Right for a while</small></div></div>
+          <div class="lane-b">
+            <div class="tl">
+              <div class="ts"><i></i><div><code>fit on 4K frames</code><small>5.2 h on one GPU</small></div></div>
+              <div class="ts crit"><i></i><div><code>step 37</code><small>first missed B6 birth</small></div></div>
+            </div>
+            <div class="lmark"><i></i><span>Drifts &middot; step 40+</span><i></i></div>
+            <div class="lq">The replicator copies itself twice, then <b>stalls into a still life</b>.</div>
+            <div class="lcons"><span>~</span>Learned Life plus noise, not HighLife.</div>
+          </div>
+        </div>
+        <div class="lane bad">
+          <div class="lane-h"><span class="lv">&#10007;</span><div><b>ConvLSTM</b><small>Wrong dynamics</small></div></div>
+          <div class="lane-b">
+            <div class="tl">
+              <div class="ts"><i></i><div><code>fit on 4K frames</code><small>3.1 h on one GPU</small></div></div>
+              <div class="ts crit"><i></i><div><code>step 12</code><small>replicator blurs out</small></div></div>
+            </div>
+            <div class="lmark"><i></i><span>Collapses &middot; step 15</span><i></i></div>
+            <div class="lq">By step 100 the grid is a <b>grey haze</b> of half-alive cells.</div>
+            <div class="lcons"><span>&#10007;</span>Averages over futures instead of picking one.</div>
+          </div>
+        </div>
+      </div>
+      <div class="obar-wrap">
+        <div class="obar-label">All 5 methods on this world</div>
+        <div class="obar"><span style="flex:2;--c:var(--good)" title="Exact (2)"></span><span style="flex:1;--c:var(--warn)" title="Drifts (1)"></span><span style="flex:2;--c:var(--bad)" title="Collapses (2)"></span></div>
+        <div class="legend"><span class="lg" style="--c:var(--good)"><i></i>Exact (2)</span><span class="lg" style="--c:var(--warn)"><i></i>Drifts (1)</span><span class="lg" style="--c:var(--bad)"><i></i>Collapses (2)</span></div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== MODULE: cite — paste your BibTeX inside <pre> ===== -->
   <section class="sec" id="cite">
-    <h2><span class="sn">03</span>Cite this work</h2>
+    <h2><span class="sn">04</span>Cite this work</h2>
     <div class="citebox">
       <button type="button" class="copy">Copy</button>
       <pre>@inproceedings{example2026rulebook,

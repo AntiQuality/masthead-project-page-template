@@ -24,6 +24,17 @@
   --badge:#d4661a;
   --on-badge:#ffffff;
 
+  /* status: case studies, table highlights */
+  --good:oklch(0.52 0.12 148);
+  --warn:#a87a26;
+  --bad:#b23a26;
+
+  /* chart series: bars, legend chips (.s1 ... .s4) */
+  --c1:oklch(0.46 0.16 256);
+  --c2:#d99051;
+  --c3:#4f9f82;
+  --c4:#9a988c;
+
   /* type */
   --display:'Space Grotesk',system-ui,sans-serif;
   --text:'Hanken Grotesk',system-ui,sans-serif;
@@ -48,6 +59,13 @@
     --on-accent:#15140f;
     --badge:#e07a33;
     --on-badge:#15140f;
+    --good:oklch(0.74 0.13 148);
+    --warn:#d9aa55;
+    --bad:#e2735e;
+    --c1:oklch(0.74 0.12 256);
+    --c2:#e0a06a;
+    --c3:#6cbf9f;
+    --c4:#77756b;
   }
 }
 :root[data-theme="dark"]{
@@ -63,4 +81,11 @@
   --on-accent:#15140f;
   --badge:#e07a33;
   --on-badge:#15140f;
+  --good:oklch(0.74 0.13 148);
+  --warn:#d9aa55;
+  --bad:#e2735e;
+  --c1:oklch(0.74 0.12 256);
+  --c2:#e0a06a;
+  --c3:#6cbf9f;
+  --c4:#77756b;
 }

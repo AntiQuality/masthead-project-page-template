@@ -58,6 +58,7 @@
           <a href="#abstract">Abstract</a>
           <a href="#method">Method</a>
           <a href="#results">Results</a>
+          <a href="#cases">Cases</a>
           <a href="#cite">Cite</a>
         </nav>
         <button class="theme" type="button" aria-label="Toggle dark mode">
@@ -146,6 +147,26 @@
       <p>Explain the method in plain paragraphs. Section headings get a mono number on the left; change it in the <code>.sn</code> span, or delete the span.</p>
       <p>Inline styles are ready: <a href="#results">links</a>, <b>bold</b>, <em>italics</em> and <code>inline code</code>.</p>
     </div>
+
+    <h3 class="subh">Before and after</h3>
+    <!-- ===== MODULE: comparison cards — two inputs and the one change between them; add class "hi" to the card to emphasize ===== -->
+    <div class="pair">
+      <div class="card">
+        <div class="ct">Setting A &middot; the usual case</div>
+        <p class="q"><span class="who">input:</span> &ldquo;An example input, quoted the way your method sees it, with the <b>key detail</b> in bold.&rdquo;</p>
+        <div class="r">What happens here, and the <b>expected outcome</b>.</div>
+      </div>
+      <div class="delta">
+        <div class="dsym">&delta;</div>
+        <div class="sym"></div>
+        <div>the one change</div>
+      </div>
+      <div class="card hi">
+        <div class="ct">Setting B &middot; the interesting case</div>
+        <p class="q"><span class="who">input:</span> &ldquo;The same input with one detail changed, so the reader can spot the <b>difference</b>.&rdquo;</p>
+        <div class="r">Why the outcome flips, and what your method does <b>differently</b>.</div>
+      </div>
+    </div>
   </section>
 
   <!-- ===== MODULE: results — key numbers, video, side-by-side figures, callout ===== -->
@@ -168,6 +189,51 @@
         <div class="kt">A third finding</div>
         <p>Units go in a <code>&lt;sub&gt;</code> so they sit small next to the number.</p>
       </div>
+    </div>
+
+    <h3 class="subh">Main results</h3>
+    <!-- ===== MODULE: results table — data-sort="num" / "text" on a <th> makes it sortable; class "best" highlights a row ===== -->
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead>
+          <tr><th data-sort="text">Method</th><th data-sort="num">Metric A &uarr;</th><th data-sort="num">Metric B &uarr;</th><th data-sort="num">Metric C &darr;</th><th data-sort="num">Params</th></tr>
+        </thead>
+        <tbody>
+          <tr class="best"><td>Ours<small>full model</small></td><td><b>92.4</b></td><td><b>81.0</b></td><td><b>0.41</b></td><td>120M</td></tr>
+          <tr><td>Ours<small>w/o component X</small></td><td>88.1</td><td>77.3</td><td>0.52</td><td>118M</td></tr>
+          <tr><td>Strong baseline<small>Author et al., 2025</small></td><td>85.6</td><td>74.9</td><td>0.63</td><td>340M</td></tr>
+          <tr><td>Baseline<small>Author et al., 2024</small></td><td>79.2</td><td>70.2</td><td>0.88</td><td>110M</td></tr>
+          <tr><td>Classic method<small>Author et al., 2019</small></td><td>71.5</td><td class="dim" data-v="">&mdash;</td><td>1.20</td><td>25M</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tbl-note">Click a column header to sort. Bold marks the best value per column; &mdash; marks a result that was not reported.</p>
+
+    <!-- ===== MODULE: bar chart — set --ymax on .plot, --v on each .bar; s1–s4 pick the series color ===== -->
+    <div class="chart" role="figure" aria-label="Bar chart comparing methods across three benchmarks">
+      <div class="chart-top">
+        <div class="chart-t">Accuracy by benchmark<span>higher is better</span></div>
+        <div class="legend">
+          <span class="lg s1"><i></i>Ours</span>
+          <span class="lg s2"><i></i>Strong baseline</span>
+          <span class="lg s4"><i></i>Baseline</span>
+        </div>
+      </div>
+      <div class="chart-scroll"><div class="chart-in">
+        <div class="plot" style="--ymax:100">
+          <div class="gl" style="--g:25"><span>25</span></div>
+          <div class="gl" style="--g:50"><span>50</span></div>
+          <div class="gl" style="--g:75"><span>75</span></div>
+          <div class="gl" style="--g:100"><span>100</span></div>
+          <div class="gl base" style="--g:0"><span>0</span></div>
+          <div class="groups">
+            <div class="grp"><div class="bar s1" style="--v:92.4;--i:0"><span class="bv">92.4</span></div><div class="bar s2" style="--v:85.6;--i:1"><span class="bv">85.6</span></div><div class="bar s4" style="--v:79.2;--i:2"><span class="bv">79.2</span></div></div>
+            <div class="grp"><div class="bar s1" style="--v:81.0;--i:3"><span class="bv">81.0</span></div><div class="bar s2" style="--v:74.9;--i:4"><span class="bv">74.9</span></div><div class="bar s4" style="--v:70.2;--i:5"><span class="bv">70.2</span></div></div>
+            <div class="grp"><div class="bar s1" style="--v:67.5;--i:6"><span class="bv">67.5</span></div><div class="bar s2" style="--v:52.3;--i:7"><span class="bv">52.3</span></div><div class="bar s4" style="--v:41.8;--i:8"><span class="bv">41.8</span></div></div>
+          </div>
+        </div>
+        <div class="xl"><span>Benchmark A</span><span>Benchmark B</span><span>Benchmark C (hard)</span></div>
+      </div></div>
     </div>
 
     <h3 class="subh">Video</h3>
@@ -199,9 +265,64 @@
     </div>
   </section>
 
+  <!-- ===== MODULE: case study — the input, an optional "why it is hard" note, one lane per method ===== -->
+  <!-- lane classes: good / warn / bad set the color; .ts.crit marks the step where things went wrong -->
+  <section class="sec" id="cases">
+    <h2><span class="sn">03</span>Case study</h2>
+    <div class="case">
+      <h3 class="case-h">A title for this example</h3>
+      <div class="case-q"><span class="cq-label">Input</span>&ldquo;The exact input all methods received. Highlight the <mark>part that matters</mark>; use <code>code</code> for names.&rdquo;</div>
+      <div class="trig"><span>&#9888;</span><p><b>Why it is hard:</b> one or two sentences on the trap in this example, so the lanes below read as an answer to it.</p></div>
+      <div class="lanes">
+        <div class="lane good">
+          <div class="lane-h"><span class="lv">&#10003;</span><div><b>Ours</b><small>Correct</small></div></div>
+          <div class="lane-b">
+            <div class="tl">
+              <div class="ts"><i></i><div><code>first_step</code><small>what it did and saw</small></div></div>
+              <div class="ts"><i></i><div><code>second_step</code><small>noticed the problem</small></div></div>
+            </div>
+            <div class="lmark"><i></i><span>Stopped &middot; outcome</span><i></i></div>
+            <div class="lq">&ldquo;A short quote of the output, with the <b>decisive part</b> in bold.&rdquo;</div>
+            <div class="lcons"><span>&#10003;</span>One line on why this is the right outcome.</div>
+          </div>
+        </div>
+        <div class="lane warn">
+          <div class="lane-h"><span class="lv">~</span><div><b>Strong baseline</b><small>Partly correct</small></div></div>
+          <div class="lane-b">
+            <div class="tl">
+              <div class="ts"><i></i><div><code>first_step</code><small>same start</small></div></div>
+              <div class="ts crit"><i></i><div><code>risky_step</code><small>where it drifted</small></div></div>
+            </div>
+            <div class="lmark"><i></i><span>Done &middot; with caveats</span><i></i></div>
+            <div class="lq">&ldquo;A quote that shows the hedge or the half-right answer.&rdquo;</div>
+            <div class="lcons"><span>~</span>One line on what it got right and what it missed.</div>
+          </div>
+        </div>
+        <div class="lane bad">
+          <div class="lane-h"><span class="lv">&#10007;</span><div><b>Baseline</b><small>Wrong</small></div></div>
+          <div class="lane-b">
+            <div class="tl">
+              <div class="ts"><i></i><div><code>first_step</code><small>same start</small></div></div>
+              <div class="ts crit"><i></i><div><code>wrong_step</code><small>the failure</small></div></div>
+            </div>
+            <div class="lmark"><i></i><span>Done &middot; wrong</span><i></i></div>
+            <div class="lq">&ldquo;A quote that shows the confident wrong answer.&rdquo;</div>
+            <div class="lcons"><span>&#10007;</span>One line on the consequence.</div>
+          </div>
+        </div>
+      </div>
+      <!-- optional outcome bar: flex values are counts, colors come from s1–s4 or --good/--warn/--bad -->
+      <div class="obar-wrap">
+        <div class="obar-label">All 20 methods on this example</div>
+        <div class="obar"><span style="flex:11;--c:var(--good)" title="Correct (11)"></span><span style="flex:4;--c:var(--warn)" title="Partly correct (4)"></span><span style="flex:5;--c:var(--bad)" title="Wrong (5)"></span></div>
+        <div class="legend"><span class="lg" style="--c:var(--good)"><i></i>Correct (11)</span><span class="lg" style="--c:var(--warn)"><i></i>Partly (4)</span><span class="lg" style="--c:var(--bad)"><i></i>Wrong (5)</span></div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== MODULE: cite — paste your BibTeX inside <pre> ===== -->
   <section class="sec" id="cite">
-    <h2><span class="sn">03</span>Cite this work</h2>
+    <h2><span class="sn">04</span>Cite this work</h2>
     <div class="citebox">
       <button type="button" class="copy">Copy</button>
       <pre>@inproceedings{author2026paper,

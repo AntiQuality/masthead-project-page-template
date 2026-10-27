@@ -1,0 +1,65 @@
+/* Masthead theme preset — Lab: cool and technical. IBM Plex Sans and Mono, green accent.
+   Use: add after tokens.css in <head>
+     <link rel="stylesheet" href="assets/css/themes/lab.css">
+   It loads its own fonts, so you can drop the default Google Fonts <link>. */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root{
+  color-scheme:light;
+  --bg:#f4f6f6;
+  --paper:#fbfcfc;
+  --ink:#121a1c;
+  --muted:#556166;
+  --rule:#121a1c;
+  --hair:rgba(18,26,28,0.12);
+  --accent:#0b7a55;
+  --accent-soft:rgba(11,122,85,0.08);
+  --on-accent:#ffffff;
+  --badge:#0b7a55;
+  --on-badge:#ffffff;
+  --c1:#0b7a55;
+  --c2:#477ec9;
+  --c3:#d08a3c;
+  --c4:#97a3a6;
+  --display:'IBM Plex Sans',system-ui,sans-serif;
+  --text:'IBM Plex Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0f1415;
+    --paper:#161d1e;
+    --ink:#e6eeef;
+    --muted:#93a2a6;
+    --rule:#e6eeef;
+    --hair:rgba(230,238,239,0.13);
+    --accent:#3fcf9a;
+    --accent-soft:rgba(63,207,154,0.12);
+    --on-accent:#0f1415;
+    --badge:#3fcf9a;
+    --on-badge:#0f1415;
+    --c1:#3fcf9a;
+    --c2:#7aa7e6;
+    --c3:#e3a764;
+    --c4:#5f6b6e;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0f1415;
+  --paper:#161d1e;
+  --ink:#e6eeef;
+  --muted:#93a2a6;
+  --rule:#e6eeef;
+  --hair:rgba(230,238,239,0.13);
+  --accent:#3fcf9a;
+  --accent-soft:rgba(63,207,154,0.12);
+  --on-accent:#0f1415;
+  --badge:#3fcf9a;
+  --on-badge:#0f1415;
+  --c1:#3fcf9a;
+  --c2:#7aa7e6;
+  --c3:#e3a764;
+  --c4:#5f6b6e;
+}

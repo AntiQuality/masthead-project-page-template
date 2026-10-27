@@ -49,22 +49,62 @@
     var fitT; window.addEventListener('resize', function () { clearTimeout(fitT); fitT = setTimeout(fitStats, 100); });
   }
 
-  // Motion: scroll reveals and stat count-up. Skipped under prefers-reduced-motion.
+  // Sortable tables: put data-sort on a <th> ("num" or "text"). Rows stay readable without JS.
+  // A cell's data-v overrides its text as the sort value (e.g. "—" cells or formatted numbers).
+  [].forEach.call(document.querySelectorAll('table.tbl'), function (table) {
+    var body = table.tBodies[0];
+    var heads = [].slice.call(table.querySelectorAll('th[data-sort]'));
+    if (!body || !heads.length) return;
+    var state = { col: -1, dir: -1 };
+    function val(tr, col, type) {
+      var td = tr.cells[col], raw = td.getAttribute('data-v');
+      if (raw === null) raw = td.textContent.trim();
+      if (type === 'text') return raw.toLowerCase();
+      var n = parseFloat(raw.replace(/[^0-9.\-]/g, ''));
+      return isNaN(n) ? -Infinity : n;
+    }
+    function sortBy(th) {
+      var col = th.cellIndex, type = th.getAttribute('data-sort');
+      if (state.col === col) state.dir = -state.dir;
+      else { state.col = col; state.dir = type === 'text' ? 1 : -1; }
+      var rows = [].slice.call(body.rows);
+      rows.sort(function (a, b) { var x = val(a, col, type), y = val(b, col, type); return x < y ? -state.dir : x > y ? state.dir : 0; });
+      rows.forEach(function (tr) { body.appendChild(tr); });
+      heads.forEach(function (h) {
+        var on = h === th, ar = h.querySelector('.ar');
+        if (on) h.setAttribute('aria-sort', state.dir === -1 ? 'descending' : 'ascending');
+        else h.removeAttribute('aria-sort');
+        if (ar) ar.textContent = on ? (state.dir === -1 ? '▼' : '▲') : '';
+      });
+    }
+    heads.forEach(function (h) {
+      if (!h.querySelector('.ar')) h.insertAdjacentHTML('beforeend', '<span class="ar" aria-hidden="true"></span>');
+      h.tabIndex = 0;
+      h.addEventListener('click', function () { sortBy(h); });
+      h.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); sortBy(h); } });
+    });
+  });
+
+  // Motion: scroll reveals, stat count-up, bar growth. Skipped under prefers-reduced-motion.
   // Add data-reveal to any element to opt it in; the defaults below cover the stock modules.
+  var charts = document.querySelectorAll('.chart');
   if ('IntersectionObserver' in window && !reduced) {
-    var rvSel = '.hero .lead, .hero-crest, .reslist .btn, .byline, .stat, .lede, .abs-grid .prose, .sec>h2, .sec .fig, .sec .fig-row, .keys>div, .callout, .citebox, [data-reveal]';
+    var rvSel = '.hero .lead, .hero-crest, .reslist .btn, .byline, .stat, .lede, .abs-grid .prose, .sec>h2, .sec .fig, .sec .fig-row, .keys>div, .callout, .citebox, .tbl-wrap, .chart, .pair>*, .case, [data-reveal]';
     var rvEls = [].slice.call(document.querySelectorAll(rvSel));
     rvEls.forEach(function (el) { el.classList.add('rv'); });
     var seen = new IntersectionObserver(function (es) {
       es.forEach(function (e) {
         if (!e.isIntersecting) return;
         e.target.classList.add('rv-in');
+        if (e.target.classList.contains('chart')) e.target.classList.add('in');
         if (e.target.classList.contains('stats')) countStats(e.target);
         seen.unobserve(e.target);
       });
     }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
     rvEls.forEach(function (el) { seen.observe(el); });
     [].forEach.call(document.querySelectorAll('.stats'), function (s) { seen.observe(s); });
+  } else {
+    [].forEach.call(charts, function (c) { c.classList.add('in'); });
   }
   // <span class="n" data-n="42.5" data-dec="1">42.5<small>%</small></span>: counts the leading text node up to data-n
   function countStats(box) {

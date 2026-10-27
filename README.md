@@ -14,6 +14,23 @@ An editorial project page template for research papers. Plain HTML, CSS and JS: 
 
 Want to see a finished page first? [`examples/rulebook.html`](examples/rulebook.html) is the same template filled in for a fictional paper. Delete the `examples/` folder when you start your own.
 
+## Theme presets
+
+`tokens.css` is the default look. For a different one, add a preset after it in `<head>`:
+
+```html
+<link rel="stylesheet" href="assets/css/themes/gazette.css">
+```
+
+| Preset | Fonts | Accent |
+|---|---|---|
+| default | Space Grotesk, Hanken Grotesk | blue |
+| `gazette` | Fraunces, Source Serif 4 | oxblood |
+| `lab` | IBM Plex Sans, IBM Plex Mono | green |
+| `mono` | Geist, Geist Mono | vermilion |
+
+Each preset loads its own fonts and defines both light and dark mode. Preview any of them on the example page with `?theme=`, for example `examples/rulebook.html?theme=gazette`.
+
 ## Acknowledgments
 
 Masthead grew out of the [AgentAbstain](https://agentabstain.github.io) project page. [Vira Kasprova](https://www.linkedin.com/in/vira-kasprova/) built the first version, and [Xun Liu](https://antiquality.github.io/) iterated on it into this template. Thanks to the whole AgentAbstain team for their feedback.

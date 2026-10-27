@@ -1,0 +1,65 @@
+/* Masthead theme preset — Mono: quiet greyscale with one signal color. Geist and Geist Mono, vermilion accent.
+   Use: add after tokens.css in <head>
+     <link rel="stylesheet" href="assets/css/themes/mono.css">
+   It loads its own fonts, so you can drop the default Google Fonts <link>. */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap');
+
+:root{
+  color-scheme:light;
+  --bg:#f5f5f4;
+  --paper:#fcfcfb;
+  --ink:#111111;
+  --muted:#5f5f5c;
+  --rule:#111111;
+  --hair:rgba(17,17,17,0.12);
+  --accent:#e5482d;
+  --accent-soft:rgba(229,72,45,0.08);
+  --on-accent:#ffffff;
+  --badge:#111111;
+  --on-badge:#f5f5f4;
+  --c1:#e5482d;
+  --c2:#111111;
+  --c3:#8a8a86;
+  --c4:#c9c9c5;
+  --display:'Geist',system-ui,sans-serif;
+  --text:'Geist',system-ui,sans-serif;
+  --mono:'Geist Mono',ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#121212;
+    --paper:#1a1a1a;
+    --ink:#ededeb;
+    --muted:#9d9d99;
+    --rule:#ededeb;
+    --hair:rgba(237,237,235,0.13);
+    --accent:#ff6e52;
+    --accent-soft:rgba(255,110,82,0.13);
+    --on-accent:#121212;
+    --badge:#ededeb;
+    --on-badge:#121212;
+    --c1:#ff6e52;
+    --c2:#ededeb;
+    --c3:#8d8d89;
+    --c4:#4a4a48;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#121212;
+  --paper:#1a1a1a;
+  --ink:#ededeb;
+  --muted:#9d9d99;
+  --rule:#ededeb;
+  --hair:rgba(237,237,235,0.13);
+  --accent:#ff6e52;
+  --accent-soft:rgba(255,110,82,0.13);
+  --on-accent:#121212;
+  --badge:#ededeb;
+  --on-badge:#121212;
+  --c1:#ff6e52;
+  --c2:#ededeb;
+  --c3:#8d8d89;
+  --c4:#4a4a48;
+}
