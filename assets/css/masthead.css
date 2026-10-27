@@ -114,6 +114,9 @@ html.js h1.title .hl{background-size:0% 3px;animation:uline .8s cubic-bezier(.3,
 /* ---- key results: three big numbers ------------------------------------ */
 .keys{display:grid;grid-template-columns:1.3fr 1fr 1fr;border-top:1px solid var(--rule)}
 .keys>div{padding:26px 24px;border-right:1px solid var(--hair)}
+/* right under a section heading the section rule is enough, so drop the second line */
+.sec>h2+.keys{border-top:0}
+.sec>h2+.keys>div{padding-top:8px}
 .keys>div:first-child{padding-left:0}
 .keys>div:last-child{padding-right:0;border-right:0}
 .big{font-family:var(--display);font-size:clamp(44px,5vw,62px);font-weight:500;letter-spacing:-0.04em;line-height:0.9}
@@ -165,7 +168,8 @@ footer .fr a:hover{color:var(--ink)}
 /* sort arrow sits in the cell padding, so header text lines up with the column values */
 .tbl th .ar{position:absolute;right:3px;bottom:12px;font-size:8px;line-height:1}
 .tbl th:first-child .ar{right:auto;left:calc(100% - 13px)}
-.tbl-note{font-size:13.5px;color:var(--muted);margin:12px 0 0;max-width:72ch}
+.tbl-note{font-size:13.5px;color:var(--muted);margin:12px 0 30px;max-width:72ch}
+.tbl-wrap:has(+.tbl-note){margin-bottom:0}
 
 /* ---- bar chart: <div class="chart"> with --v (value) per .bar ----------- */
 .chart{border:1px solid var(--rule);background:var(--paper);padding:20px 22px 18px;margin:0 0 30px}

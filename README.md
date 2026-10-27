@@ -12,13 +12,15 @@ Plain HTML, CSS and JavaScript. No build step, no dependencies, and it runs on G
 [![Lighthouse 100](https://img.shields.io/badge/Lighthouse-100-0b7a55)](#why-masthead)
 [![Dark mode](https://img.shields.io/badge/dark%20mode-yes-15140f)](#theme-presets)
 
-**[Live demo](https://antiquality.github.io/masthead-project-page-template/)** &nbsp;&nbsp; **[Use this template](https://github.com/AntiQuality/masthead-project-page-template/generate)** &nbsp;&nbsp; **[Real example: AgentAbstain](https://agentabstain.github.io)**
+**[Live demo](https://antiquality.github.io/masthead-project-page-template/)** &nbsp;&nbsp; **[Use this template](https://github.com/AntiQuality/masthead-project-page-template/generate)** &nbsp;&nbsp; **[Real example: AgentAbstain, NeurIPS 2026 Oral](https://agentabstain.github.io)**
 
-<img src=".github/screenshots/hero.png" alt="Masthead in light and dark mode" width="100%">
+<img src=".github/screenshots/demo.gif" alt="Scrolling through the Masthead demo: stats count up, the table sorts, bars grow and the page switches to dark mode" width="100%">
 
 </div>
 
 ## Why Masthead
+
+![Masthead in light and dark mode](.github/screenshots/hero.png)
 
 - **Looks like a front page, not a slide.** Big newspaper-style type, hairline rules and a paper-and-ink palette that puts your title first.
 - **Light and dark mode built in.** It follows the reader's system setting, and a toggle in the top bar remembers their choice.
