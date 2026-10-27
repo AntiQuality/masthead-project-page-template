@@ -77,3 +77,4 @@ Any hit in prose or comments needs a rewrite. Also read your new sentences for s
 2. Click every nav link, resource button and the BibTeX copy button.
 3. Make sure no placeholder text is left: search for `Project Name`, `Paper Title`, `your-username`, `First Author`, `example.com` and `0000.00000`.
 4. Run the text style check above.
+5. If this repo has `skills/masthead/scripts/check_page.py`, run `python3 skills/masthead/scripts/check_page.py index.html` and fix what it reports.

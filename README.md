@@ -27,7 +27,7 @@ Plain HTML, CSS and JavaScript. No build step, no dependencies, and it runs on G
 - **Results that read like results.** A sortable table, a bar chart drawn in plain HTML and CSS, three key numbers and a case study layout that compares methods step by step.
 - **Fast and accessible.** Lighthouse scores 100 for performance, accessibility, best practices and SEO, on mobile and desktop. The whole page is about 17 KB gzipped before fonts and figures.
 - **Ready for search and sharing.** Google Scholar `citation_*` tags, Open Graph and Twitter cards with a 1200 by 630 preview image, and schema.org structured data.
-- **Easy to edit, by hand or with an AI agent.** Every block in `index.html` is a marked module you can copy or delete, and [`AGENTS.md`](AGENTS.md) tells coding agents how to fill the page in.
+- **Easy to edit, by hand or with an AI agent.** Every block in `index.html` is a marked module you can copy or delete, and the [Masthead skill](skills/masthead/SKILL.md) lets your coding agent build the whole page from your paper.
 
 ## How it compares
 
@@ -45,13 +45,27 @@ Nerfies and its descendants are great templates and inspired a whole generation 
 
 ## Quick start
 
+### With an AI agent
+
+Install the Masthead skill, then ask your agent for a project page:
+
+```bash
+npx skills add AntiQuality/masthead-project-page-template
+```
+
+> Make a project page for my paper with Masthead.
+
+The agent reads your paper, shows you an outline, asks a few design questions (title highlight, modules, theme, preview image), then builds the page, checks it in light mode, dark mode and on phones, and publishes it to GitHub Pages when you say so. The skill works with Claude Code, Codex, Cursor, Gemini CLI and other agents that support [Agent Skills](https://agentskills.io).
+
+### By hand
+
 1. Click **Use this template** (or fork or download this repo).
 2. Edit `index.html`. Every block is marked with a `MODULE` comment, so delete what you don't need.
 3. Change colors and fonts in `assets/css/tokens.css`. Light and dark mode are both defined there.
 4. Replace the placeholder figures, video and `social-preview.png` in `assets/media/`.
 5. Turn on GitHub Pages for the repo: in Settings, open Pages and deploy from `main`.
 
-To preview locally, run `python3 -m http.server` in the repo folder and open `http://localhost:8000`.
+To preview locally, run `python3 -m http.server` in the repo folder and open `http://localhost:8000`. Before publishing, `python3 skills/masthead/scripts/check_page.py index.html` lists leftover placeholders, broken section links and other common slips.
 
 ## Modules
 
@@ -106,9 +120,9 @@ Each preset loads its own fonts and defines both light and dark mode. Preview an
 - **Motion.** Scroll reveals, counting numbers and growing bars turn off for readers who prefer reduced motion. Add `?static` to the URL to see the page without them.
 - **No JavaScript.** Nothing is hidden without JS. Sorting, the theme toggle and animations simply do not run.
 
-## Using an AI coding agent
+## Working with an AI agent
 
-Masthead is meant to be filled in by an agent as easily as by hand. Point your agent at [`AGENTS.md`](AGENTS.md) and give it your paper (PDF, abstract, BibTeX and figures). It explains which files to edit, how each module works and the text style to follow.
+Already have the template? [`AGENTS.md`](AGENTS.md) is the rulebook any coding agent can follow: which files to edit, how each module works and the text style. The skill in [`skills/masthead`](skills/masthead/SKILL.md) uses it too.
 
 ## Showcase
 
