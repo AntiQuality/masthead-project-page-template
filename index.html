@@ -7,7 +7,7 @@
   Masthead, an academic project page template for research papers.
   Everything you need to edit is marked with MODULE comments below.
   Colors and fonts: assets/css/tokens.css. Delete any module you don't need.
-  A filled-in example lives in examples/rulebook.html.
+  A real page in this style: https://agentabstain.github.io
 -->
 
 <!-- ===== META: title, search, social previews. Replace every PAPER TITLE and URL ===== -->
@@ -73,6 +73,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/masthead.css">
+<!-- optional: ?theme=gazette, ?theme=lab or ?theme=mono previews a preset. Delete this block on your own page -->
+<script>
+  (function () {
+    var m = location.search.match(/[?&]theme=(gazette|lab|mono)\b/);
+    if (!m) return;
+    var l = document.createElement('link');
+    l.rel = 'stylesheet'; l.href = 'assets/css/themes/' + m[1] + '.css';
+    document.head.appendChild(l);
+  })();
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -110,7 +120,7 @@
       <img class="hero-crest" src="assets/logo.svg" alt="Project logo" width="150" height="150">
     </div>
     <div class="hero-grid">
-      <p class="lead"><b>Project Name</b> does one thing worth a sentence. Use this paragraph to pitch the paper in two or three lines: the problem, what you did, and the result a reader should remember. Want to see it filled in? Open the <a href="examples/rulebook.html">example page</a>.</p>
+      <p class="lead"><b>Project Name</b> does one thing worth a sentence. Use this paragraph to pitch the paper in two or three lines: the problem, what you did, and the result a reader should remember. Want to see a real one? This template is adapted from the <a href="https://agentabstain.github.io" target="_blank" rel="noopener">AgentAbstain</a> project page.</p>
       <div class="reslist">
         <a class="btn" href="https://arxiv.org/abs/0000.00000" target="_blank" rel="noopener">
           <svg class="bic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 2.8h8.2L19 7.6v13.6H6z"/><path d="M14 2.8v5h5M9 12h7M9 15.5h7M9 19h4"/></svg>

@@ -12,7 +12,7 @@ An editorial project page template for research papers. Plain HTML, CSS and JS: 
 4. Replace the placeholder figures and video in `assets/media/`.
 5. Turn on GitHub Pages for the repo: in Settings, open Pages and deploy from `main`.
 
-Want to see a finished page first? [`examples/rulebook.html`](examples/rulebook.html) is the same template filled in for a fictional paper. Delete the `examples/` folder when you start your own.
+Want to see a finished page first? Masthead is adapted from the [AgentAbstain](https://agentabstain.github.io) project page, listed under Showcase below.
 
 ## Theme presets
 
@@ -29,7 +29,17 @@ Want to see a finished page first? [`examples/rulebook.html`](examples/rulebook.
 | `lab` | IBM Plex Sans, IBM Plex Mono | green |
 | `mono` | Geist, Geist Mono | vermilion |
 
-Each preset loads its own fonts and defines both light and dark mode. Preview any of them on the example page with `?theme=`, for example `examples/rulebook.html?theme=gazette`.
+Each preset loads its own fonts and defines both light and dark mode. Preview any of them on the demo page with `?theme=`, for example `index.html?theme=gazette`.
+
+## Showcase
+
+Pages in the Masthead style:
+
+| Project | Venue |
+|---|---|
+| [AgentAbstain: Do LLM Agents Know When Not to Act?](https://agentabstain.github.io) | NeurIPS 2026 Oral, Evaluations and Datasets Track |
+
+Masthead is adapted from the AgentAbstain project page and generalized into a reusable template. Built a page with Masthead? Open a pull request to add it here.
 
 ## Acknowledgments
 
