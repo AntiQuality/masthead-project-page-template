@@ -20,8 +20,15 @@
 <meta property="og:title" content="Rulebook: Learning the Rules of a World from a Handful of Frames">
 <meta property="og:description" content="Four snapshots in, an exact update rule out, and rollouts that stay correct for hundreds of steps.">
 <meta property="og:url" content="https://example.github.io/rulebook/">
-<meta property="og:image" content="https://example.github.io/rulebook/media/teaser.svg">
+<meta property="og:image" content="https://example.github.io/rulebook/media/social-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Rulebook: Learning the rules from a handful of frames">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rulebook: Learning the Rules of a World from a Handful of Frames">
+<meta name="twitter:description" content="Four snapshots in, an exact update rule out, and rollouts that stay correct for hundreds of steps.">
+<meta name="twitter:image" content="https://example.github.io/rulebook/media/social-preview.png">
+<meta name="author" content="Ada Example, Ben Placeholder, Chiara Sample, Dev Demo">
 <!-- Google Scholar reads these citation_* tags -->
 <meta name="citation_title" content="Rulebook: Learning the Rules of a World from a Handful of Frames">
 <meta name="citation_author" content="Example, Ada">
@@ -32,6 +39,27 @@
 <meta name="citation_conference_title" content="Conference on Example Learning">
 <meta name="citation_pdf_url" content="https://example.github.io/rulebook/paper.pdf">
 
+<!-- structured data: helps search engines show the paper as a scholarly article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Rulebook: Learning the Rules of a World from a Handful of Frames",
+  "description": "Four snapshots in, an exact update rule out, and rollouts that stay correct for hundreds of steps.",
+  "url": "https://example.github.io/rulebook/",
+  "sameAs": "https://arxiv.org/abs/0000.00000",
+  "image": "https://example.github.io/rulebook/media/social-preview.png",
+  "datePublished": "2026",
+  "publication": {"@type": "PublicationEvent", "name": "Conference on Example Learning 2026 (Spotlight)"},
+  "author": [
+    {"@type": "Person", "name": "Ada Example"},
+    {"@type": "Person", "name": "Ben Placeholder"},
+    {"@type": "Person", "name": "Chiara Sample"},
+    {"@type": "Person", "name": "Dev Demo"}
+  ],
+  "sourceOrganization": {"@type": "Organization", "name": "Example University"}
+}
+</script>
 <link rel="icon" href="../assets/logo.svg" type="image/svg+xml">
 <!-- apply the reader's saved light/dark choice before first paint -->
 <script>
@@ -334,6 +362,8 @@
   </main>
 
   <!-- ===== MODULE: footer — keep the Masthead credit if the template helped you ===== -->
+  <!-- Like this page? It uses Masthead (MIT): https://github.com/AntiQuality/masthead-project-page-template
+       You are free to reuse it; a link back in the footer is appreciated. -->
   <footer>
     <div class="fb"><img src="../assets/logo.svg" alt="" width="21" height="21">Rulebook</div>
     <div class="fl"><span>Example University</span><span>CEL 2026 Spotlight</span></div>
@@ -341,9 +371,11 @@
       <a href="https://arxiv.org/abs/0000.00000" target="_blank" rel="noopener">Paper</a>
       <a href="https://github.com/example/rulebook" target="_blank" rel="noopener">Code</a>
     </div>
-    <p class="credit">Page built with <a href="https://github.com/AntiQuality/masthead-project-page-template" target="_blank" rel="noopener">Masthead</a>.</p>
+    <p class="credit">Built with <a href="https://github.com/AntiQuality/masthead-project-page-template" target="_blank" rel="noopener">Masthead</a>, a project page template for research papers.</p>
   </footer>
 </div>
+<!-- back-to-top button: appears after the first screen; delete to remove -->
+<a class="to-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 19V5M5.5 11.5L12 5l6.5 6.5"/></svg></a>
 <script src="../assets/js/masthead.js" defer></script>
 </body>
 </html>

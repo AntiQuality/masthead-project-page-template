@@ -21,8 +21,16 @@
 <meta property="og:title" content="Paper Title: A Short, Memorable Subtitle">
 <meta property="og:description" content="One or two sentences that summarize the paper.">
 <meta property="og:url" content="https://your-username.github.io/your-project/">
-<meta property="og:image" content="https://your-username.github.io/your-project/assets/media/figure-wide.svg">
+<!-- link previews need an absolute URL to a 1200×630 PNG or JPG (SVG is not shown by most platforms) -->
+<meta property="og:image" content="https://your-username.github.io/your-project/assets/media/social-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Paper Title: social preview card">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Paper Title: A Short, Memorable Subtitle">
+<meta name="twitter:description" content="One or two sentences that summarize the paper.">
+<meta name="twitter:image" content="https://your-username.github.io/your-project/assets/media/social-preview.png">
+<meta name="author" content="First Author, Second Author, Third Author, Last Author">
 <!-- Google Scholar reads these citation_* tags: one citation_author per author, "Last, First" -->
 <meta name="citation_title" content="Paper Title: A Short, Memorable Subtitle">
 <meta name="citation_author" content="Author, First">
@@ -33,6 +41,27 @@
 <meta name="citation_conference_title" content="Conference Name">
 <meta name="citation_pdf_url" content="https://your-username.github.io/your-project/paper.pdf">
 
+<!-- structured data: helps search engines show the paper as a scholarly article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Paper Title: A Short, Memorable Subtitle",
+  "description": "One or two sentences that summarize the paper.",
+  "url": "https://your-username.github.io/your-project/",
+  "sameAs": "https://arxiv.org/abs/0000.00000",
+  "image": "https://your-username.github.io/your-project/assets/media/social-preview.png",
+  "datePublished": "2026",
+  "publication": {"@type": "PublicationEvent", "name": "Conference Name 2026"},
+  "author": [
+    {"@type": "Person", "name": "First Author"},
+    {"@type": "Person", "name": "Second Author"},
+    {"@type": "Person", "name": "Third Author"},
+    {"@type": "Person", "name": "Last Author"}
+  ],
+  "sourceOrganization": {"@type": "Organization", "name": "First Institution"}
+}
+</script>
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <!-- apply the reader's saved light/dark choice before first paint -->
 <script>
@@ -337,6 +366,8 @@
   </main>
 
   <!-- ===== MODULE: footer — keep the Masthead credit if the template helped you ===== -->
+  <!-- Like this page? It uses Masthead (MIT): https://github.com/AntiQuality/masthead-project-page-template
+       You are free to reuse it; a link back in the footer is appreciated. -->
   <footer>
     <div class="fb"><img src="assets/logo.svg" alt="" width="21" height="21">Project Name</div>
     <div class="fl"><span>First Institution</span><span>Conference Name 2026</span></div>
@@ -344,9 +375,11 @@
       <a href="https://arxiv.org/abs/0000.00000" target="_blank" rel="noopener">Paper</a>
       <a href="https://github.com/your-username/your-project" target="_blank" rel="noopener">Code</a>
     </div>
-    <p class="credit">Page built with <a href="https://github.com/AntiQuality/masthead-project-page-template" target="_blank" rel="noopener">Masthead</a>.</p>
+    <p class="credit">Built with <a href="https://github.com/AntiQuality/masthead-project-page-template" target="_blank" rel="noopener">Masthead</a>, a project page template for research papers.</p>
   </footer>
 </div>
+<!-- back-to-top button: appears after the first screen; delete to remove -->
+<a class="to-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 19V5M5.5 11.5L12 5l6.5 6.5"/></svg></a>
 <script src="assets/js/masthead.js" defer></script>
 </body>
 </html>

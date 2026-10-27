@@ -134,6 +134,15 @@
     }, { threshold: 0.25 }).observe(v);
   });
 
+  // Back-to-top button: shown once the reader is past the first screen.
+  var toTop = document.querySelector('.to-top');
+  if (toTop) {
+    var onScroll = function () { toTop.classList.toggle('on', window.scrollY > window.innerHeight * 0.9); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    toTop.addEventListener('click', function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' }); });
+  }
+
   // Nav highlight for the section in view.
   if ('IntersectionObserver' in window) {
     var links = {};
