@@ -159,6 +159,7 @@ Pages in the Masthead style:
 | Project | Venue |
 |---|---|
 | [AgentAbstain: Do LLM Agents Know When Not to Act?](https://agentabstain.github.io) | NeurIPS 2026 Oral, Evaluations and Datasets Track |
+| [Meta²: Precomputing Reusable Knowledge for Online Harness Evolution in Long-Horizon Agents](https://meta-square.github.io) | Preprint, 2026 |
 
 Masthead is adapted from the AgentAbstain project page and generalized into a reusable template. Built a page with Masthead? Open a pull request to add it here.
 
