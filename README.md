@@ -12,7 +12,7 @@ Plain HTML, CSS and JavaScript. No build step, no dependencies, and it runs on G
 [![Lighthouse 100](https://img.shields.io/badge/Lighthouse-100-0b7a55)](#why-masthead)
 [![Dark mode](https://img.shields.io/badge/dark%20mode-yes-15140f)](#theme-presets)
 
-**[Live demo](https://antiquality.github.io/masthead-project-page-template/)** &nbsp;&nbsp; **[Use this template](https://github.com/AntiQuality/masthead-project-page-template/generate)** &nbsp;&nbsp; **[Real example: AgentAbstain, NeurIPS 2026 Oral](https://agentabstain.github.io)**
+**[Live demo](https://antiquality.github.io/masthead-project-page-template/)** &nbsp;&nbsp; **[Use this template](https://github.com/AntiQuality/masthead-project-page-template/generate)** &nbsp;&nbsp; **[Real example: AgentAbstain (NeurIPS 2026 Oral)](https://agentabstain.github.io)**
 
 <img src=".github/screenshots/demo.gif" alt="Scrolling through the Masthead demo: stats count up, the table sorts, bars grow and the page switches to dark mode" width="100%">
 
@@ -28,6 +28,26 @@ Plain HTML, CSS and JavaScript. No build step, no dependencies, and it runs on G
 - **Fast and accessible.** Lighthouse scores 100 for performance, accessibility, best practices and SEO, on mobile and desktop. The whole page is about 17 KB gzipped before fonts and figures.
 - **Ready for search and sharing.** Google Scholar `citation_*` tags, Open Graph and Twitter cards with a 1200 by 630 preview image, and schema.org structured data.
 - **Easy to edit, by hand or with an AI agent.** Every block in `index.html` is a marked module you can copy or delete, and the [Masthead skill](skills/masthead/SKILL.md) lets your coding agent build the whole page from your paper.
+
+## In motion
+
+Motion is there to point at results, not to decorate. Everything below turns off for readers who prefer reduced motion.
+
+**Bars grow in when the chart scrolls into view, and hovering a legend entry focuses one series.**
+
+<img src=".github/screenshots/motion-chart.gif" alt="Bars rise into place, then hovering the legend fades the other series" width="100%">
+
+**Headline numbers count up the first time the stats strip appears.**
+
+<img src=".github/screenshots/motion-stats.gif" alt="The stats strip counts up to its final values" width="100%">
+
+**Click any column header to sort the results table.**
+
+<img src=".github/screenshots/motion-table.gif" alt="Clicking table headers reorders the rows" width="100%">
+
+**One click switches between light and dark mode, and the choice is remembered.**
+
+<img src=".github/screenshots/motion-theme.gif" alt="The page switches from light to dark mode and back" width="100%">
 
 ## How it compares
 
