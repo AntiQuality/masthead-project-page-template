@@ -167,7 +167,7 @@ footer .fr a:hover{color:var(--ink)}
 .tbl th[data-sort]:hover,.tbl th[aria-sort]{color:var(--ink)}
 /* sort arrow sits in the cell padding, so header text lines up with the column values */
 .tbl th .ar{position:absolute;right:3px;bottom:12px;font-size:8px;line-height:1}
-.tbl th:first-child .ar{right:auto;left:calc(100% - 13px)}
+.tbl th:first-child .ar{position:static;margin-left:6px;vertical-align:1px}
 .tbl-note{font-size:13.5px;color:var(--muted);margin:12px 0 30px;max-width:72ch}
 .tbl-wrap:has(+.tbl-note){margin-bottom:0}
 

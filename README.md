@@ -4,12 +4,16 @@
 
 # Masthead
 
-**An academic project page template for research papers.**<br>
-Plain HTML, CSS and JavaScript. No build step, no dependencies, and it runs on GitHub Pages as is.
+**An agent-native academic project page template.**<br>
+Install the skill, hand your agent the paper, and get a finished project page from one prompt.
+
+```bash
+npx skills add AntiQuality/masthead-project-page-template
+```
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-191712)](LICENSE)
 [![No build step](https://img.shields.io/badge/build-none-2b55c9)](#quick-start)
-[![Lighthouse 100](https://img.shields.io/badge/Lighthouse-100-0b7a55)](#why-masthead)
+[![Agent Skill](https://img.shields.io/badge/agent%20skill-included-0b7a55)](#with-an-ai-agent)
 [![Dark mode](https://img.shields.io/badge/dark%20mode-yes-15140f)](#theme-presets)
 
 **[Live demo](https://antiquality.github.io/masthead-project-page-template/)** &nbsp;&nbsp; **[Use this template](https://github.com/AntiQuality/masthead-project-page-template/generate)** &nbsp;&nbsp; **[Real example: AgentAbstain (NeurIPS 2026 Oral)](https://agentabstain.github.io)**
@@ -22,12 +26,13 @@ Plain HTML, CSS and JavaScript. No build step, no dependencies, and it runs on G
 
 ![Masthead in light and dark mode](.github/screenshots/hero.png)
 
+- **Build your page with one prompt.** The included [Agent Skill](skills/masthead/SKILL.md) reads your paper, asks a few design questions, builds the page, checks it and publishes it to GitHub Pages. It works with Claude Code, Codex, Cursor, Gemini CLI and other agents.
 - **Looks like a front page, not a slide.** Big newspaper-style type, hairline rules and a paper-and-ink palette that puts your title first.
 - **Light and dark mode built in.** It follows the reader's system setting, and a toggle in the top bar remembers their choice.
 - **Results that read like results.** A sortable table, a bar chart drawn in plain HTML and CSS, three key numbers and a case study layout that compares methods step by step.
 - **Fast and accessible.** Lighthouse scores 100 for performance, accessibility, best practices and SEO, on mobile and desktop. The whole page is about 17 KB gzipped before fonts and figures.
 - **Ready for search and sharing.** Google Scholar `citation_*` tags, Open Graph and Twitter cards with a 1200 by 630 preview image, and schema.org structured data.
-- **Easy to edit, by hand or with an AI agent.** Every block in `index.html` is a marked module you can copy or delete, and the [Masthead skill](skills/masthead/SKILL.md) lets your coding agent build the whole page from your paper.
+- **Plain files you can edit by hand.** HTML, CSS and JavaScript with no build step and no dependencies. Every block in `index.html` is a marked module you can copy or delete.
 
 ## In motion
 
@@ -53,6 +58,7 @@ Motion is there to point at results, not to decorate. Everything below turns off
 
 | | Masthead | Nerfies-style templates |
 |---|---|---|
+| Build the page from your paper with an agent | Yes, Agent Skill included | No |
 | Dependencies | None (Google Fonts only) | Bulma, jQuery, Font Awesome, carousel plugins |
 | Dark mode | Yes, with a toggle | No |
 | Sortable results table | Yes | No |
