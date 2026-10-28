@@ -6,8 +6,8 @@
 
 [English](README.md) &nbsp;|&nbsp; **简体中文**
 
-**一个 Agent 原生的学术项目主页模板。**<br>
-安装 skill，把论文交给你的 Agent，一句话就能得到一个完整的项目主页。
+**一个 Agent 原生的学术项目主页模板**<br>
+安装 skill，把论文交给你的 Agent，一句话就能得到一个完整的项目主页
 
 ```bash
 npx skills add AntiQuality/masthead-project-page-template
@@ -168,4 +168,4 @@ Masthead 源自 [AgentAbstain](https://agentabstain.github.io) 的项目主页�
 
 ## 许可证
 
-[MIT](LICENSE)。你可以把 Masthead 用在任何项目上，如果能在页脚链接回这个仓库，我们会很感激。
+[MIT](LICENSE)。你可以把 Masthead 用在任何项目上，如果能在页脚链接回这个仓库，非常感谢！
