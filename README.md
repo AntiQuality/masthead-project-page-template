@@ -66,7 +66,7 @@ Motion is there to point at results, not to decorate. Everything below turns off
 | Sortable results table | Yes | No |
 | Charts | Built in, HTML and CSS | Images only |
 | Case study and comparison layouts | Yes | No |
-| Theme presets | 4 | No |
+| Theme presets | 4 | None |
 | License | MIT | CC BY-SA 4.0 |
 
 Nerfies and its descendants are great templates and inspired a whole generation of project pages. Masthead takes a different look and leans on modern CSS instead of libraries.
