@@ -4,6 +4,8 @@
 
 # Masthead
 
+**English** &nbsp;|&nbsp; [简体中文](README.zh-CN.md)
+
 **An agent-native academic project page template.**<br>
 Install the skill, hand your agent the paper, and get a finished project page from one prompt.
 
