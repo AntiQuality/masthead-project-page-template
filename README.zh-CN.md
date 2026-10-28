@@ -159,6 +159,7 @@ Agent 会先读你的论文，给出一份页面大纲，问几个设计问题�
 | 项目 | 会议 |
 |---|---|
 | [AgentAbstain: Do LLM Agents Know When Not to Act?](https://agentabstain.github.io) | NeurIPS 2026 Oral，Evaluations and Datasets Track |
+| [Meta²: Precomputing Reusable Knowledge for Online Harness Evolution in Long-Horizon Agents](https://meta-square.github.io) | Preprint, 2026 |
 
 Masthead 由 AgentAbstain 的项目主页整理而来，做成了可复用的模板。用 Masthead 做了页面？欢迎提 PR 加到这里。
 
